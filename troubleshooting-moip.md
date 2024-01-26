@@ -22,6 +22,15 @@ link-bibliography: true
 
 from traditional media systems!
 
+### Step 0: Prepare
+
+#### Know *your* network
+
+* DNS servers
+* NTP & PTP servers
+* Typical `traceroute`
+* Firewalls & VLANs
+
 ### Troubleshooting Methods
 
 :::::::::::::: {.columns}
