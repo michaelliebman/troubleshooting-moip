@@ -53,9 +53,36 @@ from traditional media systems!
 
 ## Hardware Tools
 
-### Cable/Continuity/Wiremap Tester
+### Cable Testers
+
+:::::::::::::: {.columns}
+::: {.column width="50%"}
 
 ![Klein Tools Cable Tester](images/tools/hardware/continuity.jpg)
+
+:heavy_check_mark: Continuity
+
+:heavy_check_mark: Pinout
+
+:x: Connectivity
+
+:x: Crosstalk, attenuation, interference...
+
+:::
+::: {.column width="50%"}
+
+![Fluke Networks LinkIQ+](images/tools/hardware/better-continuity.webp)
+
+:heavy_check_mark: Continuity
+
+:heavy_check_mark: Pinout
+
+:heavy_check_mark: Connectivity
+
+:x: Crosstalk, attenuation, interference...
+
+:::
+::::::::::::::
 
 ::: notes
 
