@@ -68,6 +68,8 @@ from traditional media systems!
 
 :x: Crosstalk, attenuation, interference...
 
+:x: Cable break location
+
 :::
 ::: {.column width="50%"}
 
@@ -80,6 +82,8 @@ from traditional media systems!
 :heavy_check_mark: Connectivity
 
 :x: Crosstalk, attenuation, interference...
+
+:x: Cable break location
 
 :::
 ::::::::::::::
