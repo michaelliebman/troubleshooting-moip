@@ -84,14 +84,6 @@ from traditional media systems!
 :::
 ::::::::::::::
 
-::: notes
-
-This style of tester is nothing more than a glorified continuity tester.
-It will tell you if your pinout is correct.
-But it can't tell you if the cable will *work*.
-
-:::
-
 ## References
 
 ::: {#refs}
