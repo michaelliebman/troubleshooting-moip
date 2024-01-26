@@ -25,12 +25,34 @@ from traditional media systems!
 
 ### Step 0: Prepare
 
+:::::::::::::: {.columns}
+::: {.column width="50%"}
+
 #### Know *your* network
 
 * DNS servers
 * NTP & PTP servers
 * Typical `traceroute`
 * Firewalls & VLANs
+
+#### Install applications
+
+:::
+::: {.column width="50%"}
+
+#### Bootable tool kit
+
+[Ventoy](https://www.ventoy.net/) with:
+
+* [Clonezilla](https://clonezilla.org/)/[Rescuezilla](https://rescuezilla.com/)
+* [Gandalf’s Windows 10PE](https://www.fcportables.com/gandalf-boot-iso/)
+* [MS DaRT 10](https://learn.microsoft.com/en-us/microsoft-desktop-optimization-pack/dart-v10/)
+* [Memtest86](https://www.memtest86.com/)
+* [Rescatux](https://www.supergrubdisk.org/rescatux/)
+* [UltimateBootCD](https://www.ultimatebootcd.com/)
+
+:::
+::::::::::::::
 
 ### Troubleshooting Methods
 
