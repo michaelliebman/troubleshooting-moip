@@ -2,6 +2,10 @@
 title: Troubleshooting Professional Media over IP Networks
 author: Michael S. Liebman, CEV, CBNT
 date: April 12, 2024
+bibliography: troubleshooting-moip.bib
+csl: ieee-with-url
+link-citations: true
+link-bibliography: true
 ---
 
 ### Topics
