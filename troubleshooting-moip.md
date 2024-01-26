@@ -155,6 +155,15 @@ from traditional media systems!
 :::
 ::::::::::::::
 
+### Other Hardware Tools
+
+* Wire stripper
+* Crimp tool
+* Punch down tool
+* Light meter
+* Loopback adapter
+* Tone generator
+
 ## References
 
 ::: {#refs}
