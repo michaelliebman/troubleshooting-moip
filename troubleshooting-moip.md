@@ -27,7 +27,7 @@ from traditional media systems!
 :::::::::::::: {.columns}
 ::: {.column width="50%"}
 
-#### CompTIA
+#### CompTIA [@comptiaGuideNetworkTroubleshooting]
 
 1. Identify the problem.
 2. Develop a theory.
@@ -39,7 +39,7 @@ from traditional media systems!
 :::
 ::: {.column width="50%"}
 
-#### DECSAR Method
+#### DECSAR Method [@rossTeachingStructuredTroubleshooting2009]
 
 1. Define the problem.
 2. Examine the situation.
