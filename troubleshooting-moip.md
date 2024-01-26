@@ -88,6 +88,41 @@ from traditional media systems!
 :::
 ::::::::::::::
 
+### Certifiers & TDRs
+
+:::::::::::::: {.columns}
+::: {.column width="50%"}
+
+![Fluke Networks DSX CableAnalyzer](images/tools/hardware/certifier.jpg)
+
+:heavy_check_mark: Continuity
+
+:heavy_check_mark: Pinout
+
+:heavy_check_mark: Connectivity
+
+:heavy_check_mark: Crosstalk, attenuation, interference...
+
+:x: Cable break location
+
+:::
+::: {.column width="50%"}
+
+![EXFO MaxTester 715D](images/tools/hardware/otdr.jpg)
+
+:heavy_check_mark: Continuity
+
+:heavy_check_mark: Pinout
+
+:heavy_check_mark: Connectivity
+
+:heavy_check_mark: Crosstalk, attenuation, interference...
+
+:heavy_check_mark: Cable break location
+
+:::
+::::::::::::::
+
 ## References
 
 ::: {#refs}
