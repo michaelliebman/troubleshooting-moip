@@ -93,6 +93,25 @@ from traditional media systems!
 :::
 ::::::::::::::
 
+### Troubleshooting Model
+
+``` {.mermaid}
+flowchart LR
+  subgraph Check the Application
+    direction TB
+    Application --- Presentation --- Session
+  end
+  Session --- Transport
+  subgraph Check the Protocol Stack
+    direction TB
+    Transport --- Network --- ll(Logical Link)
+  end
+  ll --- Physical
+  subgraph Check the Cable/NIC
+    Physical
+  end
+```
+
 ## Hardware Tools
 
 ### Cable Testers
