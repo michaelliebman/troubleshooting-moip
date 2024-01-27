@@ -29,9 +29,9 @@ from traditional media systems!
 
 ### Check the cable
 
-![Network Patch Bay[^credit]](images/process/jordan-harrison-40XgDxBfYXM-unsplash.jpg)
+![Network Patch Bay[^credit-cable]](images/process/jordan-harrison-40XgDxBfYXM-unsplash.jpg)
 
-[^credit]: Photo by [Jordan Harrison](https://unsplash.com/@jordanharrison) on [Unsplash](https://unsplash.com/photos/blue-utp-cord-40XgDxBfYXM)
+[^credit-cable]: Photo by [Jordan Harrison](https://unsplash.com/@jordanharrison) on [Unsplash](https://unsplash.com/photos/blue-utp-cord-40XgDxBfYXM)
 
 ### Step 0: Prepare
 
