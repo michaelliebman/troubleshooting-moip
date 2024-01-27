@@ -95,7 +95,7 @@ from traditional media systems!
 
 ### Troubleshooting Model
 
-``` {.mermaid}
+``` {.mermaid width=1600}
 flowchart LR
   subgraph Check the Application
     direction TB
