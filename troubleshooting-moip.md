@@ -186,6 +186,27 @@ from traditional media systems!
 * Loopback adapter
 * Tone generator
 
+## Software Tools
+
+### Give it your best Sean Connery
+
+#### `ping`
+
+* Test reachability of a host
+* Reports dropped packets and round trip time
+* `-t` (Windows): infinite packets
+* `-4`: force IPv4
+
+#### `tracert` (Windows)/`traceroute` (Unix-like)
+
+* Test each route hop to a host
+* `-h` (Windows)/`-m` (Unix-like): max hops
+
+#### `pathping` (Windows)
+
+* ping and tracert mashed together
+* hop behavior over time
+
 ## References
 
 ::: {#refs}
