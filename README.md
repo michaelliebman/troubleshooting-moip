@@ -8,6 +8,7 @@ Use pandoc to convert to PowerPoint.
 
 ```bash
 pip install pre-commit
+npm install mermaid-filter
 pre-commit install
 pre-commit install --hook-type commit-msg
 ```
