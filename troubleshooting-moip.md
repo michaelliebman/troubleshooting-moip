@@ -239,10 +239,10 @@ flowchart LR
 * `-t` (Windows): infinite packets
 * `-4`: force IPv4
 
-#### `tracert` (Windows)/`traceroute` (Unix-like)
+#### `tracert` (Windows)/`traceroute` (Linux)
 
 * Test each route hop to a host
-* `-h` (Windows)/`-m` (Unix-like): max hops
+* `-h` (Windows)/`-m` (Linux): max hops
 
 ### Exotic Pings
 
