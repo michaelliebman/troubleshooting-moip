@@ -251,6 +251,11 @@ flowchart LR
 * `ping` and `tracert` mashed together
 * hop behavior over time
 
+#### `arping` (Linux)
+
+* Give it an IP, send an L2 ARP `who-has`
+* Give it a MAC address, send an ICMP ping
+
 ## References
 
 ::: {#refs}
