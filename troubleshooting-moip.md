@@ -248,7 +248,7 @@ flowchart LR
 
 #### `pathping` (Windows)
 
-* ping and tracert mashed together
+* `ping` and `tracert` mashed together
 * hop behavior over time
 
 ## References
