@@ -217,6 +217,19 @@ flowchart LR
 
 ## Software Tools
 
+### Check the deets
+
+#### `ipconfig` & `netsh` (Windows)
+
+* `/all`: Prints everything
+* `/release` & `/renew`: use wildcards for interface
+* `/flushdns`: Force clearing DNS cache
+
+#### `ip` & `ifconfig` (Linux)
+
+* `ip` combines `ifconfig` with `route` & `arp`
+* `ip` has a simpler, more consistent interface [@kenlonIpVsIfconfig2023]
+
 ### Give it your best Sean Connery
 
 #### `ping`
