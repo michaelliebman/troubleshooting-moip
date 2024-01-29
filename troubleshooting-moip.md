@@ -244,6 +244,8 @@ flowchart LR
 * Test each route hop to a host
 * `-h` (Windows)/`-m` (Unix-like): max hops
 
+### Exotic Pings
+
 #### `pathping` (Windows)
 
 * ping and tracert mashed together
