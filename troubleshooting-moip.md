@@ -256,6 +256,19 @@ flowchart LR
 * Give it an IP, send an L2 ARP `who-has`
 * Give it a MAC address, send an ICMP ping
 
+### Time
+
+#### NTP
+
+* 1, 2 with `prefer`, or 3+ servers
+* Windows: Use the [Meinberg NTP port](https://www.meinbergglobal.com/english/sw/ntp.htm)
+* Simple monitoring with `ntpq` or [Meinberg NTP Monitor](https://www.meinbergglobal.com/english/sw/ntp-server-monitor.htm)
+
+#### PTP
+
+* Monitor with [Meinberg PTP Track Hound](https://www.meinbergglobal.com/english/sw/ptp-track-hound.htm)
+* Analyze with [EBU LIST](https://github.com/ebu/pi-list)
+
 ## References
 
 ::: {#refs}
