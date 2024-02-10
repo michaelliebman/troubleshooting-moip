@@ -44,6 +44,7 @@ from traditional media systems!
 * NTP & PTP servers
 * Typical `traceroute`
 * Firewalls & VLANs
+* Use DCIM & IPAM like [NetBox](https://netbox.dev/)
 
 #### Install applications
 
