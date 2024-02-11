@@ -65,6 +65,12 @@ from traditional media systems!
 :::
 ::::::::::::::
 
+### Practice Makes Perfect
+
+* Use [GNS3](https://www.gns3.com/) or [EVE-NG](https://www.eve-ng.net/)
+
+![Using GNS3 to simulate a spine-leaf architecture](images/process/gns3.png)
+
 ### Troubleshooting Methods
 
 :::::::::::::: {.columns}
