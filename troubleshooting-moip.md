@@ -283,6 +283,10 @@ flowchart LR
 ### APIs
 
 * Use API testers like [Insomnia](https://insomnia.rest/) or [Postman](https://www.postman.com/)
+* Use [OpenAPI](https://openapis.org/) descriptions or
+[smithy](https://smithy.io/) contracts
+  * Example: [NMOS IS-05](https://specs.amwa.tv/is-05/releases/v1.1.2/APIs/ConnectionAPI.html)
+  ([source](https://github.com/AMWA-TV/is-05/blob/v1.1.x/APIs/ConnectionAPI.raml))
 
 ## References
 
