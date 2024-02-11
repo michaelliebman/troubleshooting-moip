@@ -267,6 +267,16 @@ flowchart LR
 * Give it an IP, send an L2 ARP `who-has`
 * Give it a MAC address, send an ICMP ping
 
+### Packet Capture
+
+* [Wireshark](https://www.wireshark.org/)
+* [tcpdump](https://www.tcpdump.org/) (Linux command line)
+* Capture at the command line, analyze in Wireshark later
+* Use capture/pcap [filters](https://www.tcpdump.org/manpages/pcap-filter.7.html)
+([cheatsheet](https://packetlife.net/media/library/12/tcpdump.pdf))
+
+![Use the filter, Luke meme](images/tools/software/use-the-filter.jpg)
+
 ### Time
 
 #### NTP
