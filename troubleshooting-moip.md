@@ -288,6 +288,14 @@ flowchart LR
   * Example: [NMOS IS-05](https://specs.amwa.tv/is-05/releases/v1.1.2/APIs/ConnectionAPI.html)
   ([source](https://github.com/AMWA-TV/is-05/blob/v1.1.x/APIs/ConnectionAPI.raml))
 
+### NMOS
+
+* [sdpoker](https://github.com/AMWA-TV/sdpoker) for troubleshooting SDP files
+* AMWA NMOS [Testing Tool](https://specs.amwa.tv/nmos-testing/) for automated
+compliance testing
+* Riedel [NMOS Explorer](https://www.riedel.net/en/downloads/firmware-software)
+for quick browsing devices
+
 ## References
 
 ::: {#refs}
