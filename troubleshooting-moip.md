@@ -68,6 +68,9 @@ from traditional media systems!
 ### Practice Makes Perfect
 
 * Use [GNS3](https://www.gns3.com/) or [EVE-NG](https://www.eve-ng.net/)
+* Approach from another angle: [J. F. Kurose and K. W. Ross, Computer
+networking: a top-down approach, Eighth edition. Hoboken: Pearson,
+2021.](https://gaia.cs.umass.edu/kurose_ross/index.php)
 
 ![Using GNS3 to simulate a spine-leaf architecture](images/process/gns3.png)
 
