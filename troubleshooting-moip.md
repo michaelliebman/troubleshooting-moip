@@ -280,6 +280,10 @@ flowchart LR
 * Monitor with [Meinberg PTP Track Hound](https://www.meinbergglobal.com/english/sw/ptp-track-hound.htm)
 * Analyze with [EBU LIST](https://github.com/ebu/pi-list)
 
+### APIs
+
+* Use API testers like [Insomnia](https://insomnia.rest/) or [Postman](https://www.postman.com/)
+
 ## References
 
 ::: {#refs}
