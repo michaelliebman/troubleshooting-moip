@@ -108,19 +108,37 @@ networking: a top-down approach, Eighth edition. Hoboken: Pearson,
 
 ``` {.mermaid width=1600}
 flowchart LR
+  classDef sub opacity:0
+  classDef note fill:#fff, stroke:#fff, font-size:24pt
+
+  subgraph notes [" "]
+    OSI
+    tcp(TCP/IP)
+  end
   subgraph Check the Application
     direction TB
     Application --- Presentation --- Session
+    app2[Application]
   end
+  OSI -.-> Application
+  tcp  -.-> app2
   Session --- Transport
+  app2 --- trans2[Transport]
+  app2 ~~~ Session
   subgraph Check the Protocol Stack
     direction TB
     Transport --- Network --- ll(Logical Link)
+    trans2 --- Internet
+    Internet --- na(Network Access)
   end
   ll --- Physical
+  na --- phys2[Physical*]
   subgraph Check the Cable/NIC
     Physical
+    phys2
   end
+  class notes sub
+  class OSI,tcp note
 ```
 
 ## Hardware Tools
