@@ -277,6 +277,13 @@ flowchart LR
 
 ![Use the filter, Luke meme](images/tools/software/use-the-filter.jpg)
 
+### Packet Generators
+
+* [PacketStorm](https://packetstorm.com/): MoIP-focused tools
+* [Keysight](https://www.keysight.com/us/en/products/network-test/protocol-load-test.html)
+  (formerly Ixia): :moneybag::moneybag::moneybag:
+* [Ostinato](https://ostinato.org/): Build yourself or reasonably priced binaries
+
 ### Time
 
 #### NTP
