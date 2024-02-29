@@ -21,7 +21,7 @@ jobs:
         with:
           args: >-
             --citeproc
-            --filter=node_modules/.bin/mermaid-filter.cmd
+            --filter=node_modules/.bin/mermaid-filter
             --from=markdown+yaml_metadata_block+emoji
             --slide-level=3
             ./troubleshooting-moip.md
