@@ -24,8 +24,8 @@ jobs:
             --filter=node_modules/.bin/mermaid-filter.cmd
             --from=markdown+yaml_metadata_block+emoji
             --slide-level=3
-            .\troubleshooting-moip.md
-            -o .\troubleshooting-moip.pptx
+            ./troubleshooting-moip.md
+            -o ./troubleshooting-moip.pptx
       - uses: actions/upload-artifact@v4
         with:
           name: troubleshooting-moip.pptx
