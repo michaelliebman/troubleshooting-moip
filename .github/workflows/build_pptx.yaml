@@ -1,0 +1,28 @@
+name: Build PowerPoint
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  convert_via_pandoc:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: docker://pandoc/core:2.9
+        with:
+          args: >-
+            --citeproc
+            --filter=node_modules/.bin/mermaid-filter.cmd
+            --from=markdown+yaml_metadata_block+emoji
+            --slide-level=3
+            .\troubleshooting-moip.md
+            -o .\troubleshooting-moip.pptx
+      - uses: actions/upload-artifact@v4
+        with:
+          name: troubleshooting-moip.pptx
+          path: troubleshooting-moip.pptx
