@@ -73,7 +73,7 @@ hands-on lab time
 * Approach from another angle:
 
   [J. F. Kurose and K. W. Ross, Computer
-networking: a top-down approach, Eighth edition. Hoboken: Pearson,
+networking: A top-down approach, Eighth edition. Hoboken: Pearson,
 2021.](https://gaia.cs.umass.edu/kurose_ross/index.php)
 
 :::
