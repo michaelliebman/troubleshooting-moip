@@ -65,13 +65,22 @@ link-bibliography: true
 
 ### Practice Makes Perfect
 
+:::::::::::::: {.columns}
+::: {.column width="50%"}
+
 * Use [GNS3](https://www.gns3.com/) or [EVE-NG](https://www.eve-ng.net/) for
 hands-on lab time
 * Approach from another angle: [J. F. Kurose and K. W. Ross, Computer
 networking: a top-down approach, Eighth edition. Hoboken: Pearson,
 2021.](https://gaia.cs.umass.edu/kurose_ross/index.php)
 
+:::
+::: {.column width="50%"}
+
 ![Using GNS3 to simulate a spine-leaf architecture](images/process/gns3.png)
+
+:::
+::::::::::::::
 
 ### Troubleshooting Methods
 
