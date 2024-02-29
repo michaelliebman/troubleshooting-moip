@@ -296,13 +296,22 @@ flowchart LR
 
 ### Packet Capture
 
+:::::::::::::: {.columns}
+::: {.column width="50%"}
+
 * [Wireshark](https://www.wireshark.org/)
 * [tcpdump](https://www.tcpdump.org/) (Linux command line)
 * Capture at the command line, analyze in Wireshark later
 * Use capture/pcap [filters](https://www.tcpdump.org/manpages/pcap-filter.7.html)
 ([cheat sheet](https://packetlife.net/media/library/12/tcpdump.pdf))
 
+:::
+::: {.column width="50%"}
+
 ![Use the filter, Luke meme](images/tools/software/use-the-filter.jpg)
+
+:::
+::::::::::::::
 
 ### Packet Generators
 
