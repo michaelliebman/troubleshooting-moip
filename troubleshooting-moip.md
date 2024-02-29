@@ -308,7 +308,7 @@ flowchart LR
 :::
 ::: {.column width="50%"}
 
-![Use the filter, Luke meme](images/tools/software/use-the-filter.jpg)
+![ ](images/tools/software/use-the-filter.jpg "Title: Use the filter, Luke meme")
 
 :::
 ::::::::::::::
