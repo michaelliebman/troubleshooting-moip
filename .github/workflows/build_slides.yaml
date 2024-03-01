@@ -7,7 +7,18 @@ on:
       - main
 
 jobs:
+  pre-commit:
+    name: Run pre-commit
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: 3.12
+      - uses: pre-commit/action@v3.0.1
   convert_via_pandoc:
+    name: Convert via pandoc
+    needs: pre-commit
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v4
