@@ -27,6 +27,16 @@ jobs:
             --slide-level=3 \
             ./troubleshooting-moip.md \
             -o ./troubleshooting-moip.pptx
+      - run: |
+          pandoc --citeproc \
+            --filter=node_modules/.bin/mermaid-filter \
+            --from=markdown+yaml_metadata_block+emoji \
+            --slide-level=3 \
+            -t revealjs \
+            --standalone \
+            -V revealjs-url=https://unpkg.com/reveal.js/ \
+            ./troubleshooting-moip.md \
+            -o ./troubleshooting-moip.html
       - name: Breakpoint if tests failed
         if: failure()
         uses: namespacelabs/breakpoint-action@v0
