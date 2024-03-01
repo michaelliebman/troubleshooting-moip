@@ -1,4 +1,4 @@
-name: Build PowerPoint
+name: Build Slides
 
 on:
   push:
@@ -27,6 +27,17 @@ jobs:
             --slide-level=3 \
             ./troubleshooting-moip.md \
             -o ./troubleshooting-moip.pptx
+      - run: |
+          pandoc --citeproc \
+            --filter=node_modules/.bin/mermaid-filter \
+            --from=markdown+yaml_metadata_block+emoji \
+            --slide-level=3 \
+            -t revealjs \
+            --standalone \
+            --embed-resources \
+            -V revealjs-url=https://unpkg.com/reveal.js/ \
+            ./troubleshooting-moip.md \
+            -o ./troubleshooting-moip.html
       - name: Breakpoint if tests failed
         if: failure()
         uses: namespacelabs/breakpoint-action@v0
@@ -37,3 +48,7 @@ jobs:
         with:
           name: troubleshooting-moip_${{ github.run_id }}.${{ github.run_number }}.${{ github.run_attempt }}.pptx
           path: troubleshooting-moip.pptx
+      - uses: actions/upload-artifact@v4
+        with:
+          name: troubleshooting-moip_${{ github.run_id }}.${{ github.run_number }}.${{ github.run_attempt }}.html
+          path: troubleshooting-moip.html
