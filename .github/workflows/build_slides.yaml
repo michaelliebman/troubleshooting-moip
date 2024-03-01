@@ -34,6 +34,7 @@ jobs:
             --slide-level=3 \
             -t revealjs \
             --standalone \
+            --embed-resources \
             -V revealjs-url=https://unpkg.com/reveal.js/ \
             ./troubleshooting-moip.md \
             -o ./troubleshooting-moip.html
