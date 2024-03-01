@@ -20,12 +20,12 @@ jobs:
       - uses: r-lib/actions/setup-pandoc@v2
         with:
           pandoc-version: 3.1.11
-      - run: >-
-          pandoc --citeproc
-            --filter=node_modules/.bin/mermaid-filter
-            --from=markdown+yaml_metadata_block+emoji
-            --slide-level=3
-            ./troubleshooting-moip.md
+      - run: |
+          pandoc --citeproc \
+            --filter=node_modules/.bin/mermaid-filter \
+            --from=markdown+yaml_metadata_block+emoji \
+            --slide-level=3 \
+            ./troubleshooting-moip.md \
             -o ./troubleshooting-moip.pptx
       - name: Breakpoint if tests failed
         if: failure()
