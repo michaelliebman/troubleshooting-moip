@@ -241,6 +241,9 @@ flowchart LR
 
 :heavy_check_mark: Cable break location
 
+:information_source:  Have & [know how to use](https://www.bicsi.org/docs/default-source/conference-presentations/2017-winter/launch-cables.pdf?sfvrsn=b1af814c_2)
+a launch fiber/box
+
 :::
 ::::::::::::::
 
