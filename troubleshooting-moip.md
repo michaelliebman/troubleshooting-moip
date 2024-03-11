@@ -294,6 +294,33 @@ flowchart LR
 * Give it an IP, send an L2 ARP `who-has`
 * Give it a MAC address, send an ICMP ping
 
+### Outside Looking In
+
+:::::::::::::: {.columns}
+::: {.column width="50%"}
+
+#### Looking Glass Servers
+
+* [BGP](https://en.wikipedia.org/wiki/Border_Gateway_Protocol) routes, `ping`,
+  & `traceroute`
+* Pick your physical/network location
+* Lists: [Traceroute.org](http://www.traceroute.org/),
+  [LookinGlass.org](https://lookinglass.org/)
+* Sites: [Hurricane Electric](https://bgp.he.net/),
+  [Lumen](https://lookingglass.centurylink.com/)
+
+:::
+::: {.column width="50%"}
+
+#### SmokePing
+
+* Long term pings with latency
+* [How to read graphs](https://oss.oetiker.ch/smokeping/doc/reading.en.html)
+* External pings up to 28 days: [DSLReports](https://www.dslreports.com/smokeping)
+
+:::
+::::::::::::::
+
 ### Packet Capture
 
 :::::::::::::: {.columns}
