@@ -296,6 +296,9 @@ flowchart LR
 
 ### Outside Looking In
 
+:::::::::::::: {.columns}
+::: {.column width="50%"}
+
 #### Looking Glass Servers
 
 * [BGP](https://en.wikipedia.org/wiki/Border_Gateway_Protocol) routes, `ping`,
@@ -306,11 +309,17 @@ flowchart LR
 * Sites: [Hurricane Electric](https://bgp.he.net/),
   [Lumen](https://lookingglass.centurylink.com/)
 
+:::
+::: {.column width="50%"}
+
 #### SmokePing
 
 * Long term pings with latency
 * [How to read graphs](https://oss.oetiker.ch/smokeping/doc/reading.en.html)
 * External pings up to 28 days: [DSLReports](https://www.dslreports.com/smokeping)
+
+:::
+::::::::::::::
 
 ### Packet Capture
 
