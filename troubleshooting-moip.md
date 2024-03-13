@@ -351,6 +351,21 @@ a launch fiber/box
 :::
 ::::::::::::::
 
+### What's That Computer Doing?
+
+:warning: Get permission and think about maintenance windows before using these tools!
+
+#### Port scanning: [Nmap](https://nmap.org/)
+
+* Scan multiple ports & addresses: `nmap -p 80,25,443,110 198.51.100.20-100`
+* Service & version detection: `-sV`
+* OS detection: `-O`
+
+#### Vulnerability Scanning
+
+* [Nessus](https://www.tenable.com/products/nessus) or [OpenVAS](https://github.com/greenbone/openvas-scanner)
+* Use [the containerized build](https://greenbone.github.io/docs/latest/22.4/container/)
+
 ### Packet Capture
 
 :::::::::::::: {.columns}
