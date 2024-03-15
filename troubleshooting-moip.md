@@ -326,6 +326,16 @@ a launch fiber/box
 :::
 ::::::::::::::
 
+### Name That Computer: `dig` (Windows/Linux)
+
+* Windows install: [Download](https://www.isc.org/download/) & **Tools Only** install
+* Specific/all record type: `dig example.com <rrtype|ANY>`
+* Specific DNS server: `@mydnsserver.example.com`
+* Be brief: `+short`
+* Long but readable: `+multiline +noall +answer +nocmd`
+* Traceroute: `+trace`
+* Interactive: omit host
+
 ### What's This Computer Doing?
 
 :::::::::::::: {.columns}
