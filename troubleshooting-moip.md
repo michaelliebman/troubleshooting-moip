@@ -402,6 +402,19 @@ a launch fiber/box
   (formerly Ixia): :moneybag::moneybag::moneybag:
 * [Ostinato](https://ostinato.org/): Build yourself or reasonably priced binaries
 
+### Performance Benchmarking
+
+#### Disk
+
+* [IOMeter](http://www.iometer.org/): Use v1.0.1
+* \# of Workers = # of Cores/vCPUs
+* Work up a realistic test plan
+
+#### Network
+
+* [Iperf2](https://sourceforge.net/projects/iperf2/): Multicast & other media flows
+* [Iperf3](https://github.com/esnet/iperf): IT workloads or public Internet
+
 ### Time
 
 #### NTP
