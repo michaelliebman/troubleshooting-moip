@@ -320,8 +320,8 @@ a launch fiber/box
 * Long term pings with latency
 * [How to read graphs](https://oss.oetiker.ch/smokeping/doc/reading.en.html)
 * External pings up to 28 days: [DSLReports](https://www.dslreports.com/smokeping)
-* [Run smokeping locally](https://oss.oetiker.ch/smokeping/doc/smokeping_install.en.html),
-  too
+* Try [vaping](https://20c.com/project/vaping) locally
+  [(Docker!)](https://github.com/20c/vaping/blob/main/docs/container.md)
 
 :::
 ::::::::::::::
