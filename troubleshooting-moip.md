@@ -464,6 +464,15 @@ for quick browsing devices
 :::
 ::::::::::::::
 
+### Dig Deep
+
+* Stress test multicast with [Multicast Hammer](https://support.pelco.com/s/article/Using-Multicast-Hammer-1538586730634?language=en_US)
+* Use [VLC to send RTP](https://support.adder.com/tiki/tiki-index.php?page=Network%3A%20Multicast%20test%20using%20VLC)
+* Check [Awesome Real Time Communications](https://github.com/rtckit/awesome-rtc#readme)
+  for SIP tools
+* Find lots of [Awesome Broadcasting](https://github.com/ebu/awesome-broadcasting#readme)
+  tools
+
 ## References
 
 ::: {#refs}
