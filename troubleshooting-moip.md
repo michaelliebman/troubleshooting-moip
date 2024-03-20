@@ -180,7 +180,7 @@ flowchart LR
 :::::::::::::: {.columns}
 ::: {.column width="50%"}
 
-![Fluke Networks LinkIQ+](images/tools/hardware/better-continuity.webp)
+![Fluke Networks LinkIQ+](images/tools/hardware/better-continuity.jpg)
 
 :::
 ::: {.column width="50%"}
