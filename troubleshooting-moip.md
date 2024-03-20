@@ -444,6 +444,26 @@ compliance testing
 * Riedel [NMOS Explorer](https://www.riedel.net/en/downloads/firmware-software)
 for quick browsing devices
 
+### Containers
+
+:::::::::::::: {.columns}
+::: {.column width="50%"}
+
+* Understand [docker networks](https://dev.to/manojpatra1991/docker-cheat-sheet-docker-networks-49k4)
+  * Don't use `bridge0`
+  * Expose minimal ports with `-p`
+* [netshoot](https://github.com/nicolaka/netshoot): "a Docker +
+  Kubernetes network trouble-shooting swiss-army container"
+* Go back to basics: [traefik/whoami](https://github.com/traefik/whoami)
+
+:::
+::: {.column width="50%"}
+
+![ ](https://camo.githubusercontent.com/ac0ee4f2ad3b7d8b6f01804412061675d50367c2d6002631e51adab110863045/687474703a2f2f7777772e6272656e64616e67726567672e636f6d2f506572662f6c696e75785f6f62736572766162696c6974795f746f6f6c732e706e67 "Title: Linux Performance Observability Tools")
+
+:::
+::::::::::::::
+
 ## References
 
 ::: {#refs}
