@@ -338,9 +338,6 @@ a launch fiber/box
 
 ### What's This Computer Doing?
 
-:::::::::::::: {.columns}
-::: {.column width="50%"}
-
 #### `netstat` (Windows)
 
 * Choose protocol: `-p (tcp|udp)`
@@ -348,18 +345,12 @@ a launch fiber/box
 * GUI: [TCPView](https://learn.microsoft.com/en-us/sysinternals/downloads/tcpview)
   or [Resource Monitor](https://stackoverflow.com/a/23718720/6283412)
 
-:::
-::: {.column width="50%"}
-
 #### `ss` (Linux)
 
 * Choose protocol: `--tcp` or `--udp`
 * Only listening ports: `-l`
 * [Filters](https://manpages.debian.org/bookworm/iproute2/ss.8.en.html):
   `ss -nt dst 8.8.8.0/24`
-
-:::
-::::::::::::::
 
 ### What's That Computer Doing?
 
