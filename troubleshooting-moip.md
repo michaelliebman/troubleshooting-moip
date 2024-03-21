@@ -350,7 +350,7 @@ a launch fiber/box
 * Choose protocol: `--tcp` or `--udp`
 * Only listening ports: `-l`
 * [Filters](https://manpages.debian.org/bookworm/iproute2/ss.8.en.html):
-  `ss -nt dst 8.8.8.0/24`
+  `ss -nt dst 192.0.2.0/24`
 
 ### What's That Computer Doing?
 
