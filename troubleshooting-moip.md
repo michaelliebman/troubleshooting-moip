@@ -312,9 +312,6 @@ a launch fiber/box
 * Sites: [Hurricane Electric](https://bgp.he.net/),
   [Lumen](https://lookingglass.centurylink.com/)
 
-:::
-::: {.column width="50%"}
-
 #### SmokePing
 
 * Long term pings with latency
@@ -322,6 +319,11 @@ a launch fiber/box
 * External pings up to 28 days: [DSLReports](https://www.dslreports.com/smokeping)
 * Try [vaping](https://20c.com/project/vaping) locally
   [(Docker!)](https://github.com/20c/vaping/blob/main/docs/container.md)
+
+:::
+::: {.column width="50%"}
+
+![SmokePing](https://oss.oetiker.ch/smokeping/demo.png)
 
 :::
 ::::::::::::::
