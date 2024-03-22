@@ -11,13 +11,11 @@ link-bibliography: true
 
 ### Topics
 
-* Troubleshooting Process
-* Tools
-  * Hardware
-  * Software
-* Techniques & Tips
+* The Troubleshooting Process & Getting Ready
+* Hardware Tools
+* Software Tools
 
-## Troubleshooting Process
+## The Troubleshooting Process & Getting Ready
 
 ### It's not that different
 
