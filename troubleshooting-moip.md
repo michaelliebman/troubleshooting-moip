@@ -12,9 +12,8 @@ link-bibliography: true
 ### Topics
 
 * The Troubleshooting Process & Getting Ready
-* Tools
-  * Hardware
-  * Software
+* Hardware Tools
+* Software Tools
 
 ## The Troubleshooting Process & Getting Ready
 
