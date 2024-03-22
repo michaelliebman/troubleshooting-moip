@@ -15,7 +15,6 @@ link-bibliography: true
 * Tools
   * Hardware
   * Software
-* Techniques & Tips
 
 ## The Troubleshooting Process & Getting Ready
 
