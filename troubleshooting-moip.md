@@ -306,7 +306,7 @@ a launch fiber/box
 
 * [BGP](https://en.wikipedia.org/wiki/Border_Gateway_Protocol) routes, `ping`,
   & `traceroute`
-* Pick your physical/network location
+* Pick the physical/network location to test from
 * Lists: [Traceroute.org](http://www.traceroute.org/),
   [LookinGlass.org](https://lookinglass.org/)
 * Sites: [Hurricane Electric](https://bgp.he.net/),
