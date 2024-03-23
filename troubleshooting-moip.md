@@ -382,6 +382,9 @@ a launch fiber/box
 
 ### What's This Computer Doing?
 
+:::::::::::::: {.columns}
+::: {.column width="50%"}
+
 #### `netstat` (Windows)
 
 * Choose protocol: `-p (tcp|udp)`
@@ -395,6 +398,17 @@ a launch fiber/box
 * Only listening ports: `-l`
 * [Filters](https://manpages.debian.org/bookworm/iproute2/ss.8.en.html):
   `ss -nt dst 192.0.2.0/24`
+
+:::
+::: {.column width="50%"}
+
+![[^credit-microscope]](https://source.unsplash.com/6q5QG8iIgRo "Title: Woman looking through a microscope")
+
+[^credit-microscope]: Photo by [Trust "Tru" Katsande](https://unsplash.com/@iamtru)
+on [Unsplash](https://unsplash.com/photos/woman-looking-on-microscope-inside-room-6q5QG8iIgRo)
+
+:::
+::::::::::::::
 
 ### What's That Computer Doing?
 
