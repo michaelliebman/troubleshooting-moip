@@ -446,10 +446,24 @@ on [Unsplash](https://unsplash.com/photos/woman-looking-on-microscope-inside-roo
 
 ### Packet Generators
 
+:::::::::::::: {.columns}
+::: {.column width="50%"}
+
 * [PacketStorm](https://packetstorm.com/): MoIP-focused tools
 * [Keysight](https://www.keysight.com/us/en/products/network-test/protocol-load-test.html)
   (formerly Ixia): :moneybag::moneybag::moneybag:
 * [Ostinato](https://ostinato.org/): Build yourself or reasonably priced binaries
+
+:::
+::: {.column width="50%"}
+
+![[^credit-turbine]](https://source.unsplash.com/MkKK8fH3dpA "Title: Wind turbines")
+
+[^credit-turbine]: Photo by [Shinichiro Ichimura](https://unsplash.com/@califso)
+on [Unsplash](https://unsplash.com/photos/a-row-of-wind-turbines-in-front-of-a-mountain-MkKK8fH3dpA)
+
+:::
+::::::::::::::
 
 ### Performance Benchmarking
 
