@@ -307,6 +307,9 @@ a launch fiber/box
 
 ### Exotic Pings
 
+:::::::::::::: {.columns}
+::: {.column width="50%"}
+
 #### `pathping` (Windows)
 
 * `ping` and `tracert` mashed together
@@ -316,6 +319,14 @@ a launch fiber/box
 
 * Give it an IP, send an L2 ARP `who-has`
 * Give it a MAC address, send an ICMP ping
+
+:::
+::: {.column width="50%"}
+
+![ ](https://cds.cern.ch/images/CERN-PHOTO-202109-138-6/file?size=large "Title: A chain of Large Hadron Collider magnets")
+
+:::
+::::::::::::::
 
 ### Outside Looking In
 
