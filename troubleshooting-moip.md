@@ -250,7 +250,7 @@ a launch fiber/box
 * Wire stripper
 * Crimp tool
 * Punch down tool
-* Light meter
+* Optical Power Meter (aka light meter)
 * Loopback adapter
 * Tone generator
 
