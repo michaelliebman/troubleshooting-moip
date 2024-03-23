@@ -350,6 +350,9 @@ a launch fiber/box
 
 ### Name That Computer: `dig` (Windows/Linux)
 
+:::::::::::::: {.columns}
+::: {.column width="50%"}
+
 * Windows install: [Download](https://www.isc.org/download/) & **Tools Only** install
 * Specific/all record type: `dig example.com <rrtype|ANY>`
 * Specific DNS server: `@mydnsserver.example.com`
@@ -357,6 +360,14 @@ a launch fiber/box
 * Long but readable: `+multiline +noall +answer +nocmd`
 * Traceroute: `+trace`
 * Interactive: omit host
+
+:::
+::: {.column width="50%"}
+
+![ ](https://static.wikia.nocookie.net/name-that-tune/images/7/7f/Ntt50s.png/revision/latest?cb=20150214165431 "Title: 1950s Name That Tune title card")
+
+:::
+::::::::::::::
 
 ### What's This Computer Doing?
 
