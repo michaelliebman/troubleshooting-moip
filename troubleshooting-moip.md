@@ -271,6 +271,9 @@ a launch fiber/box
 
 ### Give it your best Sean Connery
 
+:::::::::::::: {.columns}
+::: {.column width="50%"}
+
 #### `ping`
 
 * Test reachability of a host
@@ -282,6 +285,14 @@ a launch fiber/box
 
 * Test each route hop to a host
 * `-h` (Windows)/`-m` (Linux): max hops
+
+:::
+::: {.column width="50%"}
+
+![ ](https://i.imgflip.com/4fakj6.jpg "Title:Sean Connery in Hunt for Red October")
+
+:::
+::::::::::::::
 
 ### Exotic Pings
 
