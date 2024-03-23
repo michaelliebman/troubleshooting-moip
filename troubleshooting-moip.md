@@ -247,12 +247,23 @@ a launch fiber/box
 
 ### Other Hardware Tools
 
+:::::::::::::: {.columns}
+::: {.column width="50%"}
+
 * Wire stripper
 * Crimp tool
 * Punch down tool
 * Optical Power Meter (aka light meter)
 * Loopback adapter
 * Tone generator
+
+:::
+::: {.column width="50%"}
+
+![ ](https://i.redd.it/m61xhejx90d51.jpg "Title: The messiest racks you have ever seen")
+
+:::
+::::::::::::::
 
 ## Software Tools
 
