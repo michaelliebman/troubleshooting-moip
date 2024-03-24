@@ -493,6 +493,9 @@ on [Unsplash](https://unsplash.com/photos/a-row-of-wind-turbines-in-front-of-a-m
 
 ### Time
 
+:::::::::::::: {.columns}
+::: {.column width="50%"}
+
 #### NTP
 
 * 1, 2 with `prefer`, or 3+ servers
@@ -503,6 +506,14 @@ on [Unsplash](https://unsplash.com/photos/a-row-of-wind-turbines-in-front-of-a-m
 
 * Monitor with [Meinberg PTP Track Hound](https://www.meinbergglobal.com/english/sw/ptp-track-hound.htm)
 * Analyze with [EBU LIST](https://github.com/ebu/pi-list)
+
+:::
+::: {.column width="50%"}
+
+![PTP Track Hound v2](images/tools/software/ptptrackhound.jpg)
+
+:::
+::::::::::::::
 
 ### APIs
 
