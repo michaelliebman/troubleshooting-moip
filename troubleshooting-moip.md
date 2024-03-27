@@ -573,7 +573,7 @@ for quick browsing devices
 :::
 ::::::::::::::
 
-### Dig Deep
+### Keep Searching
 
 :::::::::::::: {.columns}
 ::: {.column width="50%"}
