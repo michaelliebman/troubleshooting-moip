@@ -575,12 +575,25 @@ for quick browsing devices
 
 ### Dig Deep
 
+:::::::::::::: {.columns}
+::: {.column width="50%"}
+
 * Stress test multicast with [Multicast Hammer](https://support.pelco.com/s/article/Using-Multicast-Hammer-1538586730634?language=en_US)
 * Use [VLC to send RTP](https://support.adder.com/tiki/tiki-index.php?page=Network%3A%20Multicast%20test%20using%20VLC)
 * Check [Awesome Real Time Communications](https://github.com/rtckit/awesome-rtc#readme)
   for SIP tools
 * Find lots of [Awesome Broadcasting](https://github.com/ebu/awesome-broadcasting#readme)
   tools
+
+:::
+::: {.column width="50%"}
+
+![[^credit-library]](https://source.unsplash.com/OG9NZVNCnFo "Title: Interior of the Vasconcelos Library in Mexico City")
+
+[^credit-library]: Photo by [Girl with red hat](https://unsplash.com/@girlwithredhat) on [Unsplash](https://unsplash.com/photos/white-and-green-concrete-building-OG9NZVNCnFo)
+
+:::
+::::::::::::::
 
 ## References
 
