@@ -247,12 +247,23 @@ a launch fiber/box
 
 ### Other Hardware Tools
 
+:::::::::::::: {.columns}
+::: {.column width="50%"}
+
 * Wire stripper
 * Crimp tool
 * Punch down tool
 * Optical Power Meter (aka light meter)
 * Loopback adapter
 * Tone generator
+
+:::
+::: {.column width="50%"}
+
+![ ](https://i.redd.it/m61xhejx90d51.jpg "Title: The messiest racks you have ever seen")
+
+:::
+::::::::::::::
 
 ## Software Tools
 
@@ -271,6 +282,9 @@ a launch fiber/box
 
 ### Give it your best Sean Connery
 
+:::::::::::::: {.columns}
+::: {.column width="50%"}
+
 #### `ping`
 
 * Test reachability of a host
@@ -283,7 +297,18 @@ a launch fiber/box
 * Test each route hop to a host
 * `-h` (Windows)/`-m` (Linux): max hops
 
+:::
+::: {.column width="50%"}
+
+![ ](https://i.imgflip.com/4fakj6.jpg "Title:Sean Connery in Hunt for Red October")
+
+:::
+::::::::::::::
+
 ### Exotic Pings
+
+:::::::::::::: {.columns}
+::: {.column width="50%"}
 
 #### `pathping` (Windows)
 
@@ -294,6 +319,14 @@ a launch fiber/box
 
 * Give it an IP, send an L2 ARP `who-has`
 * Give it a MAC address, send an ICMP ping
+
+:::
+::: {.column width="50%"}
+
+![ ](https://cds.cern.ch/images/CERN-PHOTO-202109-138-6/file?size=large "Title: A chain of Large Hadron Collider magnets")
+
+:::
+::::::::::::::
 
 ### Outside Looking In
 
@@ -328,6 +361,9 @@ a launch fiber/box
 
 ### Name That Computer: `dig` (Windows/Linux)
 
+:::::::::::::: {.columns}
+::: {.column width="50%"}
+
 * Windows install: [Download](https://www.isc.org/download/) & **Tools Only** install
 * Specific/all record type: `dig example.com <rrtype|ANY>`
 * Specific DNS server: `@mydnsserver.example.com`
@@ -336,7 +372,18 @@ a launch fiber/box
 * Traceroute: `+trace`
 * Interactive: omit host
 
+:::
+::: {.column width="50%"}
+
+![ ](https://static.wikia.nocookie.net/name-that-tune/images/7/7f/Ntt50s.png/revision/latest?cb=20150214165431 "Title: 1950s Name That Tune title card")
+
+:::
+::::::::::::::
+
 ### What's This Computer Doing?
+
+:::::::::::::: {.columns}
+::: {.column width="50%"}
 
 #### `netstat` (Windows)
 
@@ -351,6 +398,17 @@ a launch fiber/box
 * Only listening ports: `-l`
 * [Filters](https://manpages.debian.org/bookworm/iproute2/ss.8.en.html):
   `ss -nt dst 192.0.2.0/24`
+
+:::
+::: {.column width="50%"}
+
+![[^credit-microscope]](https://source.unsplash.com/6q5QG8iIgRo "Title: Woman looking through a microscope")
+
+[^credit-microscope]: Photo by [Trust "Tru" Katsande](https://unsplash.com/@iamtru)
+on [Unsplash](https://unsplash.com/photos/woman-looking-on-microscope-inside-room-6q5QG8iIgRo)
+
+:::
+::::::::::::::
 
 ### What's That Computer Doing?
 
@@ -388,12 +446,29 @@ a launch fiber/box
 
 ### Packet Generators
 
+:::::::::::::: {.columns}
+::: {.column width="50%"}
+
 * [PacketStorm](https://packetstorm.com/): MoIP-focused tools
 * [Keysight](https://www.keysight.com/us/en/products/network-test/protocol-load-test.html)
   (formerly Ixia): :moneybag::moneybag::moneybag:
 * [Ostinato](https://ostinato.org/): Build yourself or reasonably priced binaries
 
+:::
+::: {.column width="50%"}
+
+![[^credit-turbine]](https://source.unsplash.com/MkKK8fH3dpA "Title: Wind turbines")
+
+[^credit-turbine]: Photo by [Shinichiro Ichimura](https://unsplash.com/@califso)
+on [Unsplash](https://unsplash.com/photos/a-row-of-wind-turbines-in-front-of-a-mountain-MkKK8fH3dpA)
+
+:::
+::::::::::::::
+
 ### Performance Benchmarking
+
+:::::::::::::: {.columns}
+::: {.column width="50%"}
 
 #### Disk
 
@@ -406,7 +481,20 @@ a launch fiber/box
 * [Iperf2](https://sourceforge.net/projects/iperf2/): Multicast & other media flows
 * [Iperf3](https://github.com/esnet/iperf): IT workloads or public Internet
 
+:::
+::: {.column width="50%"}
+
+![[^credit-car]](https://source.unsplash.com/bdHBAFLMMOc "Title: An analog car dashboard")
+
+[^credit-car]: Photo by [Frankie Lopez](https://unsplash.com/@frankielopez) on [Unsplash](https://unsplash.com/photos/gray-analog-vehicle-guage-bdHBAFLMMOc)
+
+:::
+::::::::::::::
+
 ### Time
+
+:::::::::::::: {.columns}
+::: {.column width="50%"}
 
 #### NTP
 
@@ -419,7 +507,18 @@ a launch fiber/box
 * Monitor with [Meinberg PTP Track Hound](https://www.meinbergglobal.com/english/sw/ptp-track-hound.htm)
 * Analyze with [EBU LIST](https://github.com/ebu/pi-list)
 
+:::
+::: {.column width="50%"}
+
+![PTP Track Hound v2](images/tools/software/ptptrackhound.jpg)
+
+:::
+::::::::::::::
+
 ### APIs
+
+:::::::::::::: {.columns}
+::: {.column width="50%"}
 
 * Use API testers like [Insomnia](https://insomnia.rest/) or [Postman](https://www.postman.com/)
 * Use [OpenAPI](https://openapis.org/) descriptions or
@@ -427,13 +526,32 @@ a launch fiber/box
   * Example: [NMOS IS-05](https://specs.amwa.tv/is-05/releases/v1.1.2/APIs/ConnectionAPI.html)
   ([source](https://github.com/AMWA-TV/is-05/blob/v1.1.x/APIs/ConnectionAPI.raml))
 
+:::
+::: {.column width="50%"}
+
+![Testing an NMOS API with Bruno](images/tools/software/api.png)
+
+:::
+::::::::::::::
+
 ### NMOS
+
+:::::::::::::: {.columns}
+::: {.column width="50%"}
 
 * [sdpoker](https://github.com/AMWA-TV/sdpoker) for troubleshooting SDP files
 * AMWA NMOS [Testing Tool](https://specs.amwa.tv/nmos-testing/) for automated
 compliance testing
 * Riedel [NMOS Explorer](https://www.riedel.net/en/downloads/firmware-software)
 for quick browsing devices
+
+:::
+::: {.column width="50%"}
+
+![ ](images/tools/software/2110-nmos.png "Title: SMPTE ST 2110 & NMOS logos")
+
+:::
+::::::::::::::
 
 ### Containers
 
@@ -457,12 +575,25 @@ for quick browsing devices
 
 ### Dig Deep
 
+:::::::::::::: {.columns}
+::: {.column width="50%"}
+
 * Stress test multicast with [Multicast Hammer](https://support.pelco.com/s/article/Using-Multicast-Hammer-1538586730634?language=en_US)
 * Use [VLC to send RTP](https://support.adder.com/tiki/tiki-index.php?page=Network%3A%20Multicast%20test%20using%20VLC)
 * Check [Awesome Real Time Communications](https://github.com/rtckit/awesome-rtc#readme)
   for SIP tools
 * Find lots of [Awesome Broadcasting](https://github.com/ebu/awesome-broadcasting#readme)
   tools
+
+:::
+::: {.column width="50%"}
+
+![[^credit-library]](https://source.unsplash.com/OG9NZVNCnFo "Title: Interior of the Vasconcelos Library in Mexico City")
+
+[^credit-library]: Photo by [Girl with red hat](https://unsplash.com/@girlwithredhat) on [Unsplash](https://unsplash.com/photos/white-and-green-concrete-building-OG9NZVNCnFo)
+
+:::
+::::::::::::::
 
 ## References
 
