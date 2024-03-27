@@ -536,11 +536,22 @@ on [Unsplash](https://unsplash.com/photos/a-row-of-wind-turbines-in-front-of-a-m
 
 ### NMOS
 
+:::::::::::::: {.columns}
+::: {.column width="50%"}
+
 * [sdpoker](https://github.com/AMWA-TV/sdpoker) for troubleshooting SDP files
 * AMWA NMOS [Testing Tool](https://specs.amwa.tv/nmos-testing/) for automated
 compliance testing
 * Riedel [NMOS Explorer](https://www.riedel.net/en/downloads/firmware-software)
 for quick browsing devices
+
+:::
+::: {.column width="50%"}
+
+![ ](images/tools/software/2110-nmos.png "Title: SMPTE ST 2110 & NMOS logos")
+
+:::
+::::::::::::::
 
 ### Containers
 
