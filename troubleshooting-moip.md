@@ -546,6 +546,8 @@ on [Unsplash](https://unsplash.com/photos/a-row-of-wind-turbines-in-front-of-a-m
 compliance testing
 * Riedel [NMOS Explorer](https://www.riedel.net/en/downloads/firmware-software)
 for quick browsing devices
+* [EBU LIST](https://github.com/ebu/pi-list) for timing analysis, ANC decoding,
+  A/V sync, redundancy comparison, and more!
 
 :::
 ::: {.column width="50%"}
