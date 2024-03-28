@@ -520,7 +520,9 @@ on [Unsplash](https://unsplash.com/photos/a-row-of-wind-turbines-in-front-of-a-m
 :::::::::::::: {.columns}
 ::: {.column width="50%"}
 
-* Use API testers like [Insomnia](https://insomnia.rest/) or [Postman](https://www.postman.com/)
+* Use API testers like [milkman](https://github.com/warmuuh/milkman),
+  [bruno](https://github.com/usebruno/bruno), and [insomnium](https://github.com/ArchGPT/insomnium)
+  * Find more [Awesome API Clients](https://github.com/stepci/awesome-api-clients?tab=readme-ov-file)
 * Use [OpenAPI](https://openapis.org/) descriptions or
 [smithy](https://smithy.io/) contracts
   * Example: [NMOS IS-05](https://specs.amwa.tv/is-05/releases/v1.1.2/APIs/ConnectionAPI.html)
