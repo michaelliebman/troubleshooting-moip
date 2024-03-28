@@ -7,6 +7,7 @@ bibliography: troubleshooting-moip.bib
 csl: ieee-with-url
 link-citations: true
 link-bibliography: true
+monofont: Fira Code
 ---
 
 ### Topics
