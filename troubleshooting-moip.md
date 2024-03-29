@@ -30,6 +30,14 @@ monofont: Fira Code
 
 [^credit-cable]: Photo by [Jordan Harrison](https://unsplash.com/@jordanharrison) on [Unsplash](https://unsplash.com/photos/blue-utp-cord-40XgDxBfYXM)
 
+::: notes
+
+It *nearly* goes without saying that when troubleshooting Media over IP systems,
+you should not overlook basic checks like cables or turning software switches
+on.
+
+:::
+
 ### Step 0: Prepare
 
 :::::::::::::: {.columns}
