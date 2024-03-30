@@ -292,6 +292,15 @@ where a break in a cable is.
 :::
 ::::::::::::::
 
+::: notes
+
+Cable certifiers are often a corporate purchase and bought as part of a testing
+kit. There are lots of accessories and add-ons needed to cover the cable types
+you want to test. Again, features vary, but certifiers will give you statistics
+for the quality of a cable and features for managing bulk cable tests.
+
+:::
+
 ### TDRs & OTDRs
 
 :::::::::::::: {.columns}
