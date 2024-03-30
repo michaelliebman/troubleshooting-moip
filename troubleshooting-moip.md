@@ -260,6 +260,15 @@ tell you if a cable will work with certainty or at a specific speed.
 :::
 ::::::::::::::
 
+::: notes
+
+A step-up in price, network testers will actually verify connectivity and line
+rate of a connection. Features vary, but most network testers don't tell you the
+quality of the cable (crosstalk, attenuation, interference, etc.) or tell you
+where a break in a cable is.
+
+:::
+
 ### Certifiers
 
 :::::::::::::: {.columns}
