@@ -327,6 +327,16 @@ a launch fiber/box
 :::
 ::::::::::::::
 
+::: notes
+
+Time domain reflectometers and their optical cousins are the ultimate physical
+layer troubleshooting tool. They can help you locate cable breaks and passive
+network components like patches. But they are *expensive* and make sure you have
+all the accessories you need, like a launch box, before you need to use your
+OTDR.
+
+:::
+
 ### Other Hardware Tools
 
 :::::::::::::: {.columns}
