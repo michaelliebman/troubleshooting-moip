@@ -151,6 +151,13 @@ physical or digital rental or a digital purchase.)
 :::
 ::::::::::::::
 
+::: notes
+
+Note that the network-specific CompTIA method is nearly identical to the generic
+DESCAR method.
+
+:::
+
 ### Troubleshooting Model
 
 ``` {.mermaid width=1600}
