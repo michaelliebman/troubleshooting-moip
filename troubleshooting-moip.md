@@ -108,6 +108,20 @@ networking: A top-down approach, Eighth edition. Hoboken: Pearson,
 :::
 ::::::::::::::
 
+::: notes
+
+Network simulators can be a little tricky to set up and resource hungry once
+running, but you can get hands-on experience with major manufacturer switches in
+realistic topologies.
+
+Most network courses and texts start at the bottom of the OSI model and work
+their way up. Kurose and Ross take the rare, opposite approach of starting with
+the application layer and working down. This can be more relatable to new
+network engineers. (Note that this most recent edition is only available as a
+physical or digital rental or a digital purchase.)
+
+:::
+
 ### Troubleshooting Methods
 
 :::::::::::::: {.columns}
