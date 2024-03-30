@@ -229,6 +229,14 @@ theorizing steps that we just looked at.
 :::
 ::::::::::::::
 
+::: notes
+
+Cable testers will verify continuity on the conductors and tell you if the
+pinout on both ends matches. Basic testers, like this Klein Tools, will *not*
+tell you if a cable will work with certainty or at a specific speed.
+
+:::
+
 ### Network Testers
 
 :::::::::::::: {.columns}
