@@ -70,6 +70,23 @@ on.
 :::
 ::::::::::::::
 
+::: notes
+
+Before you start troubleshooting MoIP (or other) systems, you should be
+prepared with the knowledge and tools for the situation.
+
+* Know your network's DNS and time servers
+* Know the usual route hops you see on your network (more on `traceroute` later)
+* Know where the firewalls are and the VLAN structure
+* Use a data center information management (DCIM) and IP address management
+  (IPAM) system like NetBox
+* Install any software you need --- and there's a *bunch* we are going to cover
+  --- before you need it
+* Consider preparing a USB bootable tool kit. Ventoy makes it easy to not have
+  to pick one. Instead you can fill a big thumb drive with a variety.
+
+:::
+
 ### Practice Makes Perfect
 
 :::::::::::::: {.columns}
