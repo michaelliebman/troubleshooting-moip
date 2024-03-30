@@ -195,6 +195,15 @@ flowchart LR
   class OSI,tcp note
 ```
 
+::: notes
+
+I find it useful to translate the formal OSI and TCP/IP models for networks into
+a troubleshooting model. Think of it as translator for between what you see in
+the wild and what you learn. Having the different perspectives helps with the
+theorizing steps that we just looked at.
+
+:::
+
 ## Hardware Tools
 
 ### Cable Testers
