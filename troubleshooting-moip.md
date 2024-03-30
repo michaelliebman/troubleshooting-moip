@@ -83,7 +83,7 @@ prepared with the knowledge and tools for the situation.
 * Install any software you need --- and there's a *bunch* we are going to cover
   --- before you need it
 * Consider preparing a USB bootable tool kit. Ventoy makes it easy to not have
-  to pick one. Instead you can fill a big thumb drive with a variety.
+  to pick one. Instead, you can fill a big thumb drive with a variety.
 
 :::
 
