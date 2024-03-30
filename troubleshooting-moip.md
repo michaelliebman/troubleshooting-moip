@@ -357,6 +357,13 @@ OTDR.
 :::
 ::::::::::::::
 
+::: notes
+
+Most of the other tools you need for working on professional media networks are
+probably already in your toolkit.
+
+:::
+
 ## Software Tools
 
 ### Check the deets
