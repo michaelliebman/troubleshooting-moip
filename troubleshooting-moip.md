@@ -513,6 +513,23 @@ trip time. Give it a MAC address, and it will ping the resolved IP address.
 :::
 ::::::::::::::
 
+::: notes
+
+All the pings we've talked about so far test from a device that you control out
+to another device, but sometimes you need to test from the public Internet in to
+your network. Looking glass servers let you remotely run `ping` or `traceroute`
+to another device. Significant connectivity providers run these servers, which
+lets you choose where you test from, geographically and network
+connectivity-wise. Check the server lists to find the right one to test with for
+your situation.
+
+Want to do a quick, longer term (up to about a month) test from the outside?
+DSLReports still runs a SmokePing service, which does periodic packet loss and
+latency tests. Check the terms of service to make sure it works for your
+situation or consider setting up `vaping` for a similar self-hosted test.
+
+:::
+
 ### Name That Computer: `dig` (Windows/Linux)
 
 :::::::::::::: {.columns}
