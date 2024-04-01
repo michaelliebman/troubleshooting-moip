@@ -465,6 +465,23 @@ measure the impact of any switches or other layer 2 devices with `ping` or
 :::
 ::::::::::::::
 
+::: notes
+
+Sometimes `ping` and `traceroute` don't give you the clues you are looking for.
+ICMP pings aren't the same as TCP or UDP. You can get `ping`-like tests with
+Nmap, which we'll cover later.
+
+On Windows, `ping` and `tracert` will give you slightly different views of the
+network, so why not get the best of both worlds? PathPing gives you individual
+hop statistics over a longer period of time.
+
+Linux lets you test layer 2 connectivity with `arping`. Address Resolution
+Protocol maps MAC addresses to IP addresses. Give `arping` an IP address, it
+will send link layer frames to the associated MAC address and report the round
+trip time. Give it a MAC address, and it will ping the resolved IP address.
+
+:::
+
 ### Outside Looking In
 
 :::::::::::::: {.columns}
