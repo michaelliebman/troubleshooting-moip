@@ -593,6 +593,25 @@ on [Unsplash](https://unsplash.com/photos/woman-looking-on-microscope-inside-roo
 :::
 ::::::::::::::
 
+::: notes
+
+What a computer is (or isn't) doing on a network isn't always visible from the
+applications we use. Is the server actually waiting for incoming connections?
+Which server did the app actually connect to?
+
+On Windows, the command line tool `netstat` ("network statistics") can show
+incoming and outgoing connections. It can be helpful to limit the protocol to
+TCP or UDP individually, since the lists get long. Printing all the listening
+ports with `-l` answers that first question about waiting for incoming
+connections.
+
+For Linux, you can still use `netstat`, though the syntax is a little different
+from the Windows command. The newer `ss` utility gives you more control over
+that long list of connections with filters. The command above will show all TCP
+connections by port number (not name) destined for the 192.0.2.0 subnet.
+
+:::
+
 ### What's That Computer Doing?
 
 :warning: Get permission and think about maintenance windows before using these tools!
