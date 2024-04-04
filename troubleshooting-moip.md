@@ -627,6 +627,32 @@ connections by port number (not name) destined for the 192.0.2.0 subnet.
 * [Nessus](https://www.tenable.com/products/nessus) or [OpenVAS](https://github.com/greenbone/openvas-scanner)
 * Use [the containerized build](https://greenbone.github.io/docs/latest/22.4/container/)
 
+::: notes
+
+Before we talk about finding out what is going on with another computer on a
+network, proceed with caution. Make sure you have permission to use these tools.
+If your enterprise security team is doing their job, they will know what you are
+up to. Besides policy, depending on how you use these tools, they carry the risk
+of causing outages. Consider running these tools during planned maintenance
+windows and on offline systems.
+
+With that out of the way, let's talk about find out what is going on with
+another device, especially one you don't have the ability to work directly on.
+(But you have permission to muck around, right?) You can use Nmap to scan for
+open ports, those programs waiting for incoming connections. Nmap can also
+guess at the specific service and version running or detect the OS of the
+scanned device.
+
+Vulnerability scanning is an essential part of security preparedness. You want
+to know what your exposure is, so you can take the right mitigation steps.
+The most common response is remediation, or patching the vulnerability, but you
+might take other actions until you verify the patch with a vendor or test it out
+yourself. Nessus and the less commercialized OpenVAS (aka Greenbone) scanners
+are the most common in use. Use OpenVAS's Docker container to get up and running
+fast and without unnecessary complexity.
+
+:::
+
 ### Packet Capture
 
 :::::::::::::: {.columns}
