@@ -551,6 +551,18 @@ situation or consider setting up `vaping` for a similar self-hosted test.
 :::
 ::::::::::::::
 
+::: notes
+
+You will still frequently work with IP addresses, but DNS is an important part
+of modern MoIP systems. You can perform basic DNS queries with `nslookup`. When
+you need to look up more specialized or complex records, like NMOS can use,
+you will need to `dig` for the information. With `dig` you can request all
+records for a name, clearly specify the DNS server to query, format the response
+for the situation, and even follow the resolution path from root server to
+authoritative server.
+
+:::
+
 ### What's This Computer Doing?
 
 :::::::::::::: {.columns}
