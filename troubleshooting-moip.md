@@ -705,6 +705,20 @@ on [Unsplash](https://unsplash.com/photos/a-row-of-wind-turbines-in-front-of-a-m
 :::
 ::::::::::::::
 
+::: notes
+
+Working with "real" network traffic isn't always possible or ideal. Packet
+generators let you synthesize or replay network traffic. One common use case is
+for load testing. Some packet generators can pump out *a lot* of flows, more
+than you can get going from those "real" devices.
+
+But commercial packet generators can be well beyond our budgets, and we need
+some packets to learn or experiment with. [Ostinato](https://ostinato.org/) is
+open source, free as in beer if you build it yourself, or affordably available
+as pre-built binaries.
+
+:::
+
 ### Performance Benchmarking
 
 :::::::::::::: {.columns}
