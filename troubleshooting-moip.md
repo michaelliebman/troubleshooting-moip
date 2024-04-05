@@ -889,6 +889,22 @@ the organization behind NMOS has also released an automated testing tool.
 :::
 ::::::::::::::
 
+::: notes
+
+Containers can make your life easier, but if you have to troubleshoot Docker
+networking, you might be questioning your tech stack choices. First, make sure
+you understand how docker networks work. A good cheat sheet will help with some
+secure best practices, like not using the default network and only exposing
+necessary ports.
+
+You can use the `netshoot` container to access some great troubleshooting tools.
+But its real strength is being able to troubleshoot from inside a specific
+docker network or even inside another container's namespace. You'll need to do
+that when you don't have those troubleshooting tools already built in to the
+problem container.
+
+:::
+
 ### Keep Searching
 
 :::::::::::::: {.columns}
