@@ -1,5 +1,5 @@
 ---
-title: Troubleshooting Professional Media over IP Networks
+title: Media IP Troubleshooting Tips and Tricks
 author: Michael S. Liebman, CEV, CBNT
 institute: SiriusXM
 date: April 12, 2024
