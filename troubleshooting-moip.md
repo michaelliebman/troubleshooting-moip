@@ -636,7 +636,7 @@ up to. Besides policy, depending on how you use these tools, they carry the risk
 of causing outages. Consider running these tools during planned maintenance
 windows and on offline systems.
 
-With that out of the way, let's talk about find out what is going on with
+With that out of the way, let's talk about how to find out what is going on with
 another device, especially one you don't have the ability to work directly on.
 (But you have permission to muck around, right?) You can use Nmap to scan for
 open ports, those programs waiting for incoming connections. Nmap can also
