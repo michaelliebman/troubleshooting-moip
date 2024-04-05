@@ -30,6 +30,14 @@ monofont: Fira Code
 
 [^credit-cable]: Photo by [Jordan Harrison](https://unsplash.com/@jordanharrison) on [Unsplash](https://unsplash.com/photos/blue-utp-cord-40XgDxBfYXM)
 
+::: notes
+
+It *nearly* goes without saying that when troubleshooting Media over IP systems,
+you should not overlook basic checks like cables or turning software switches
+on.
+
+:::
+
 ### Step 0: Prepare
 
 :::::::::::::: {.columns}
@@ -62,6 +70,23 @@ monofont: Fira Code
 :::
 ::::::::::::::
 
+::: notes
+
+Before you start troubleshooting MoIP (or other) systems, you should be
+prepared with the knowledge and tools for the situation.
+
+* Know your network's DNS and time servers
+* Know the usual route hops you see on your network (more on `traceroute` later)
+* Know where the firewalls are and the VLAN structure
+* Use a data center information management (DCIM) and IP address management
+  (IPAM) system like NetBox
+* Install any software you need --- and there's a *bunch* we are going to cover
+  --- before you need it
+* Consider preparing a USB bootable tool kit. Ventoy makes it easy to not have
+  to pick one. Instead, you can fill a big thumb drive with a variety.
+
+:::
+
 ### Practice Makes Perfect
 
 :::::::::::::: {.columns}
@@ -82,6 +107,20 @@ networking: A top-down approach, Eighth edition. Hoboken: Pearson,
 
 :::
 ::::::::::::::
+
+::: notes
+
+Network simulators can be a little tricky to set up and resource hungry once
+running, but you can get hands-on experience with major manufacturer switches in
+realistic topologies.
+
+Most network courses and texts start at the bottom of the OSI model and work
+their way up. Kurose and Ross take the rare, opposite approach of starting with
+the application layer and working down. This can be more relatable to new
+network engineers. (Note that this most recent edition is only available as a
+physical or digital rental or a digital purchase.)
+
+:::
 
 ### Troubleshooting Methods
 
@@ -111,6 +150,13 @@ networking: A top-down approach, Eighth edition. Hoboken: Pearson,
 
 :::
 ::::::::::::::
+
+::: notes
+
+Note that the network-specific CompTIA method is nearly identical to the generic
+DECSAR method.
+
+:::
 
 ### Troubleshooting Model
 
@@ -149,6 +195,15 @@ flowchart LR
   class OSI,tcp note
 ```
 
+::: notes
+
+I find it useful to translate the formal OSI and TCP/IP models for networks into
+a troubleshooting model. Think of it as translator for between what you see in
+the wild and what you learn. Having the different perspectives helps with the
+theorizing steps that we just looked at.
+
+:::
+
 ## Hardware Tools
 
 ### Cable Testers
@@ -174,6 +229,14 @@ flowchart LR
 :::
 ::::::::::::::
 
+::: notes
+
+Cable testers will verify continuity on the conductors and tell you if the
+pinout on both ends matches. Basic testers, like this Klein Tools, will *not*
+tell you if a cable will work with certainty or at a specific speed.
+
+:::
+
 ### Network Testers
 
 :::::::::::::: {.columns}
@@ -197,6 +260,15 @@ flowchart LR
 :::
 ::::::::::::::
 
+::: notes
+
+A step-up in price, network testers will actually verify connectivity and line
+rate of a connection. Features vary, but most network testers don't tell you the
+quality of the cable (crosstalk, attenuation, interference, etc.) or tell you
+where a break in a cable is.
+
+:::
+
 ### Certifiers
 
 :::::::::::::: {.columns}
@@ -219,6 +291,15 @@ flowchart LR
 
 :::
 ::::::::::::::
+
+::: notes
+
+Cable certifiers are often a corporate purchase and bought as part of a testing
+kit. There are lots of accessories and add-ons needed to cover the cable types
+you want to test. Again, features vary, but certifiers will give you statistics
+for the quality of a cable and features for managing bulk cable tests.
+
+:::
 
 ### TDRs & OTDRs
 
@@ -246,6 +327,16 @@ a launch fiber/box
 :::
 ::::::::::::::
 
+::: notes
+
+Time domain reflectometers and their optical cousins are the ultimate physical
+layer troubleshooting tool. They can help you locate cable breaks and passive
+network components like patches. But they are *expensive* and make sure you have
+all the accessories you need, like a launch box, before you need to use your
+OTDR.
+
+:::
+
 ### Other Hardware Tools
 
 :::::::::::::: {.columns}
@@ -266,6 +357,13 @@ a launch fiber/box
 :::
 ::::::::::::::
 
+::: notes
+
+Most of the other tools you need for working on professional media networks are
+probably already in your toolkit.
+
+:::
+
 ## Software Tools
 
 ### Check the deets
@@ -280,6 +378,28 @@ a launch fiber/box
 
 * `ip` combines `ifconfig` with `route` & `arp`
 * `ip` has a simpler, more consistent interface [@kenlonIpVsIfconfig2023]
+
+::: notes
+
+Unless you have a remarkable memory of a small network, you are going to want to
+find out how the network is configured on a computer.
+
+On Windows, you do that
+with `ipconfig`, usually with the `/all`. That will print out the IP address,
+network mask, default router, DNS servers, and more for every network interface.
+You can also `/release` or `/renew` DHCP-assigned addresses, which you limit to
+specific interfaces. Windows interface names are long, so wildcards save some
+typing. Sometimes you need to clear the DNS cache with `/flushdns` to get a new
+record that has an unexpired TTL. If you need to script setting or getting the
+configuration, you can use `netsh`.
+
+On Linux, older documentation talks about `ifconfig` (interface config) for
+getting most of the same information as Windows' `ipconfig`. But newer
+distributions ship with the `ip` utility. You will find it easier to use, plus
+it combines information about the `arp` cache and `route` table that you need to
+run separately from `ifconfig` and `ipconfig`.
+
+:::
 
 ### Give it your best Sean Connery
 
@@ -306,6 +426,22 @@ a launch fiber/box
 :::
 ::::::::::::::
 
+::: notes
+
+After checking the configuration of a problem computer, you will want to check
+if you can reach another device. `ping` uses ICMP to send an **echo request**,
+wait for an **echo reply**, and measure the round trip time. The RTT tells you
+the latency of a connection. If you Captain Ramius's order and add `-t` to your
+ping, you can measure RTT over time and look for intermittent dropped packets.
+
+Each "hop" on the path between devices can be the cause of dropped packets or
+high latency. `traceroute`/`tracert` manipulate the time-to-live (TTL) to ping
+*router* hops one by one. Note the emphasis on routers there. You can't directly
+measure the impact of any switches or other layer 2 devices with `ping` or
+`traceroute`.
+
+:::
+
 ### Exotic Pings
 
 :::::::::::::: {.columns}
@@ -328,6 +464,23 @@ a launch fiber/box
 
 :::
 ::::::::::::::
+
+::: notes
+
+Sometimes `ping` and `traceroute` don't give you the clues you are looking for.
+ICMP pings aren't the same as TCP or UDP. You can get `ping`-like tests with
+Nmap, which we'll cover later.
+
+On Windows, `ping` and `tracert` will give you slightly different views of the
+network, so why not get the best of both worlds? PathPing gives you individual
+hop statistics over a longer period of time.
+
+Linux lets you test layer 2 connectivity with `arping`. Address Resolution
+Protocol maps MAC addresses to IP addresses. Give `arping` an IP address, it
+will send link layer frames to the associated MAC address and report the round
+trip time. Give it a MAC address, and it will ping the resolved IP address.
+
+:::
 
 ### Outside Looking In
 
@@ -360,6 +513,23 @@ a launch fiber/box
 :::
 ::::::::::::::
 
+::: notes
+
+All the pings we've talked about so far test from a device that you control out
+to another device, but sometimes you need to test from the public Internet in to
+your network. Looking glass servers let you remotely run `ping` or `traceroute`
+to another device. Significant connectivity providers run these servers, which
+lets you choose where you test from, geographically and network
+connectivity-wise. Check the server lists to find the right one to test with for
+your situation.
+
+Want to do a quick, longer term (up to about a month) test from the outside?
+DSLReports still runs a SmokePing service, which does periodic packet loss and
+latency tests. Check the terms of service to make sure it works for your
+situation or consider setting up `vaping` for a similar self-hosted test.
+
+:::
+
 ### Name That Computer: `dig` (Windows/Linux)
 
 :::::::::::::: {.columns}
@@ -380,6 +550,18 @@ a launch fiber/box
 
 :::
 ::::::::::::::
+
+::: notes
+
+You will still frequently work with IP addresses, but DNS is an important part
+of modern MoIP systems. You can perform basic DNS queries with `nslookup`. When
+you need to look up more specialized or complex records, like NMOS can use,
+you will need to `dig` for the information. With `dig` you can request all
+records for a name, clearly specify the DNS server to query, format the response
+for the situation, and even follow the resolution path from root server to
+authoritative server.
+
+:::
 
 ### What's This Computer Doing?
 
@@ -411,6 +593,25 @@ on [Unsplash](https://unsplash.com/photos/woman-looking-on-microscope-inside-roo
 :::
 ::::::::::::::
 
+::: notes
+
+What a computer is (or isn't) doing on a network isn't always visible from the
+applications we use. Is the server actually waiting for incoming connections?
+Which server did the app actually connect to?
+
+On Windows, the command line tool `netstat` ("network statistics") can show
+incoming and outgoing connections. It can be helpful to limit the protocol to
+TCP or UDP individually, since the lists get long. Printing all the listening
+ports with `-l` answers that first question about waiting for incoming
+connections.
+
+For Linux, you can still use `netstat`, though the syntax is a little different
+from the Windows command. The newer `ss` utility gives you more control over
+that long list of connections with filters. The command above will show all TCP
+connections by port number (not name) destined for the 192.0.2.0 subnet.
+
+:::
+
 ### What's That Computer Doing?
 
 :warning: Get permission and think about maintenance windows before using these tools!
@@ -425,6 +626,32 @@ on [Unsplash](https://unsplash.com/photos/woman-looking-on-microscope-inside-roo
 
 * [Nessus](https://www.tenable.com/products/nessus) or [OpenVAS](https://github.com/greenbone/openvas-scanner)
 * Use [the containerized build](https://greenbone.github.io/docs/latest/22.4/container/)
+
+::: notes
+
+Before we talk about finding out what is going on with another computer on a
+network, proceed with caution. Make sure you have permission to use these tools.
+If your enterprise security team is doing their job, they will know what you are
+up to. Besides policy, depending on how you use these tools, they carry the risk
+of causing outages. Consider running these tools during planned maintenance
+windows and on offline systems.
+
+With that out of the way, let's talk about find out what is going on with
+another device, especially one you don't have the ability to work directly on.
+(But you have permission to muck around, right?) You can use Nmap to scan for
+open ports, those programs waiting for incoming connections. Nmap can also
+guess at the specific service and version running or detect the OS of the
+scanned device.
+
+Vulnerability scanning is an essential part of security preparedness. You want
+to know what your exposure is, so you can take the right mitigation steps.
+The most common response is remediation, or patching the vulnerability, but you
+might take other actions until you verify the patch with a vendor or test it out
+yourself. Nessus and the less commercialized OpenVAS (aka Greenbone) scanners
+are the most common in use. Use OpenVAS's Docker container to get up and running
+fast and without unnecessary complexity.
+
+:::
 
 ### Packet Capture
 
@@ -444,6 +671,18 @@ on [Unsplash](https://unsplash.com/photos/woman-looking-on-microscope-inside-roo
 
 :::
 ::::::::::::::
+
+::: notes
+
+We'll be covering packet capture and analysis in more depth later today, but I
+do want to share one Wireshark tip with you. Use *capture* filters as much as
+you can to keep your memory and file sizes manageable. Display filters are
+easier to work with and more expressive, but media systems are chatty,
+generating a lot of packets that take some sifting. I try to start with a short,
+unfiltered capture, figure out the packets I'm generally interested in, and then
+run a longer capture that filters out as much of the noise as possible.
+
+:::
 
 ### Packet Generators
 
@@ -465,6 +704,20 @@ on [Unsplash](https://unsplash.com/photos/a-row-of-wind-turbines-in-front-of-a-m
 
 :::
 ::::::::::::::
+
+::: notes
+
+Working with "real" network traffic isn't always possible or ideal. Packet
+generators let you synthesize or replay network traffic. One common use case is
+for load testing. Some packet generators can pump out *a lot* of flows, more
+than you can get going from those "real" devices.
+
+But commercial packet generators can be well beyond our budgets, and we need
+some packets to learn or experiment with. [Ostinato](https://ostinato.org/) is
+open source, free as in beer if you build it yourself, or affordably available
+as pre-built binaries.
+
+:::
 
 ### Performance Benchmarking
 
@@ -492,6 +745,20 @@ on [Unsplash](https://unsplash.com/photos/a-row-of-wind-turbines-in-front-of-a-m
 :::
 ::::::::::::::
 
+::: notes
+
+"Is it fast enough?" The specs say that the disk, CPU, RAM... name your
+component should be, but we all know reality doesn't match spec sheets.
+Even though IOMeter hasn't been updated in a while, it remains the best disk
+performance benchmarking tool readily available. Spend a bit of time working
+out a realistic test plan for your benchmark.
+
+For network performance tests, Iperf2 and Iperf3 have overlapping feature sets.
+Iperf2 is better for multicast and other media flows. Use Iperf3 for more
+typical IT workload or public Internet tests.
+
+:::
+
 ### Time
 
 :::::::::::::: {.columns}
@@ -516,6 +783,25 @@ on [Unsplash](https://unsplash.com/photos/a-row-of-wind-turbines-in-front-of-a-m
 :::
 ::::::::::::::
 
+::: notes
+
+When troubleshooting time related issues, one of your first checks should be a
+device's NTP source. You need to specify 1 or 3 or more NTP servers for the
+client to work properly. If you have 2 NTP servers, common in media facilities
+with a pair of redundant sync generators, you have to set one of those sources
+as the preferred source. The NTP algorithm won't be able to figure out the
+correct adjustment without a preferred server.
+
+Another common problem is using the built-in Windows time client. Do yourself a
+favor, disable that service and install the Meinberg port of the reference NTP
+tools. That client works, uses the same easy to distribute configuration file as
+the Linux version, and gives you `ntp` for basic monitoring.
+
+Meinberg also has a separate NTP monitoring tool, as well as free and paid PTP
+monitoring solutions. For PTP, you can use EBU LIST for detailed analysis.
+
+:::
+
 ### APIs
 
 :::::::::::::: {.columns}
@@ -536,6 +822,21 @@ on [Unsplash](https://unsplash.com/photos/a-row-of-wind-turbines-in-front-of-a-m
 
 :::
 ::::::::::::::
+
+::: notes
+
+The first time you come face to face with a RESTful API, it can feel like a bit
+of a dark art, but there are two ways to turn that art into science. First,
+don't try to handcraft an API request. Use an API testing tool. Leading free or
+open source testers have recently made user un-friendly changes, so I can't
+strongly recommend one right now. There are plenty of choices depending on your
+needs and preferences.
+
+The second tip for API troubleshooting is you should try to work from formal API
+specifications, often in the form of OpenAPI descriptions or smithy contracts
+for event-based APIs.
+
+:::
 
 ### NMOS & 2110
 
@@ -558,6 +859,16 @@ for quick browsing devices
 :::
 ::::::::::::::
 
+::: notes
+
+There are some great open source and freely available for NMOS and SMPTE ST 2110
+troubleshooting. Mentioned before, EBU LIST is great for analyzing your video
+and audio flows. Different vendors have different implementations and
+interpretations of SDP descriptions, which sdpoker can help you reconcile. AMWA,
+the organization behind NMOS has also released an automated testing tool.
+
+:::
+
 ### Containers
 
 :::::::::::::: {.columns}
@@ -577,6 +888,22 @@ for quick browsing devices
 
 :::
 ::::::::::::::
+
+::: notes
+
+Containers can make your life easier, but if you have to troubleshoot Docker
+networking, you might be questioning your tech stack choices. First, make sure
+you understand how docker networks work. A good cheat sheet will help with some
+secure best practices, like not using the default network and only exposing
+necessary ports.
+
+You can use the `netshoot` container to access some great troubleshooting tools.
+But its real strength is being able to troubleshoot from inside a specific
+docker network or even inside another container's namespace. You'll need to do
+that when you don't have those troubleshooting tools already built in to the
+problem container.
+
+:::
 
 ### Keep Searching
 
@@ -599,6 +926,16 @@ for quick browsing devices
 
 :::
 ::::::::::::::
+
+::: notes
+
+The last tip I'll leave you with is to keep your eyes open. You never know when
+you'll find the next tool or technique that will help you solve problems faster
+or deal with more complex or just plain weird issues. Stress test mutlicast?
+Get a hammer. Need a down and dirty RTP stream? Fire up VLC. There's lots more
+Awesome out there.
+
+:::
 
 ## References
 
