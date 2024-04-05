@@ -430,8 +430,9 @@ run separately from `ifconfig` and `ipconfig`.
 After checking the configuration of a problem computer, you will want to check
 if you can reach another device. `ping` uses ICMP to send an **echo request**,
 wait for an **echo reply**, and measure the round trip time. The RTT tells you
-the latency of a connection. If you Captain Ramius's order and add `-t` to your
-ping, you can measure RTT over time and look for intermittent dropped packets.
+the latency of a connection. If you ignore Captain Ramius's order and add `-t`
+to your ping, you can measure RTT over time and look for intermittent dropped
+packets.
 
 Each "hop" on the path between devices can be the cause of dropped packets or
 high latency. `traceroute`/`tracert` manipulate the time-to-live (TTL) to ping
