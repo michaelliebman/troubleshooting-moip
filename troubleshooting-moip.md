@@ -745,6 +745,20 @@ as pre-built binaries.
 :::
 ::::::::::::::
 
+::: notes
+
+"Is it fast enough?" The specs say that the disk, CPU, RAM... name your
+component should be, but we all know reality doesn't match spec sheets.
+Even though IOMeter hasn't been updated in a while, it remains the best disk
+performance benchmarking tool readily available. Spend a bit of time working
+out a realistic test plan for your benchmark.
+
+For network performance tests, Iperf2 and Iperf3 have overlapping feature sets.
+Iperf2 is better for multicast and other media flows. Use Iperf3 for more
+typical IT workload or public Internet tests.
+
+:::
+
 ### Time
 
 :::::::::::::: {.columns}
