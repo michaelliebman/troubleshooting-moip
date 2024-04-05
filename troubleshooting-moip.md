@@ -823,6 +823,21 @@ monitoring solutions. For PTP, you can use EBU LIST for detailed analysis.
 :::
 ::::::::::::::
 
+::: notes
+
+The first time you come face to face with a RESTful API, it can feel like a bit
+of a dark art, but there are two ways to turn that art into science. First,
+don't try to handcraft an API request. Use an API testing tool. Leading free or
+open source testers have recently made user un-friendly changes, so I can't
+strongly recommend one right now. There are plenty of choices depending on your
+needs and preferences.
+
+The second tip for API troubleshooting is you should try to work from formal API
+specifications, often in the form of OpenAPI descriptions or smithy contracts
+for event-based APIs.
+
+:::
+
 ### NMOS & 2110
 
 :::::::::::::: {.columns}
@@ -843,6 +858,16 @@ for quick browsing devices
 
 :::
 ::::::::::::::
+
+::: notes
+
+There are some great open source and freely available for NMOS and SMPTE ST 2110
+troubleshooting. Mentioned before, EBU LIST is great for analyzing your video
+and audio flows. Different vendors have different implementations and
+interpretations of SDP descriptions, which sdpoker can help you reconcile. AMWA,
+the organization behind NMOS has also released an automated testing tool.
+
+:::
 
 ### Containers
 
