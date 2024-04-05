@@ -153,8 +153,11 @@ physical or digital rental or a digital purchase.)
 
 ::: notes
 
-Note that the network-specific CompTIA method is nearly identical to the generic
-DECSAR method.
+Let's look at the steps we'll follow for troubleshooting networked systems. Note
+that the network-specific CompTIA method is nearly identical to the generic
+DECSAR method. We'll identify the problem, work up a theory about the cause,
+test that theory, create a plan for correcting the issue, and close out the
+documentation we've been keeping throughout the process.
 
 :::
 
