@@ -387,13 +387,14 @@ probably already in your toolkit.
 Unless you have a remarkable memory of a small network, you are going to want to
 find out how the network is configured on a computer.
 
-On Windows, you do that with `ipconfig`, usually with the `/all`. That will
-print out the IP address, network mask, default router, DNS servers, and more
-for every network interface. You can also `/release` or `/renew` DHCP-assigned
-addresses, which you can limit to specific interfaces. Windows interface names
-are long, so wildcards save some typing. Sometimes you need to clear the DNS
-cache with `/flushdns` to get a new record that has an unexpired TTL. If you
-need to script setting or getting the configuration, you can use `netsh`.
+On Windows, you do that with `ipconfig`, usually with the `/all` switch. That
+will print out the IP address, network mask, default router, DNS servers, and
+more for every network interface. You can also `/release` or `/renew`
+DHCP-assigned addresses, which you can limit to specific interfaces. Windows
+interface names are long, so wildcards save some typing. Sometimes you need to
+clear the DNS cache with `/flushdns` to get a new record that has an unexpired
+TTL. If you need to script setting or getting the configuration, you can use
+`netsh`.
 
 On Linux, older documentation talks about `ifconfig` (interface config) for
 getting most of the same information as Windows' `ipconfig`. But newer
