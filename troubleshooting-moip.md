@@ -712,8 +712,8 @@ network, proceed with caution. Make sure you have permission to use these tools.
 If your enterprise security team is doing their job, they will know what you are
 up to. Besides being concerned about policy violation risks, there is another,
 familiar risk to consider. Depending on how you use these tools, they carry the
-risk of causing outages. Consider running these tools during planned maintenance
-windows and on offline systems.
+danger of causing outages. Consider running these tools during planned
+maintenance windows and on offline systems.
 
 With that out of the way, let's talk about how to find out what is going on with
 another device, especially one you don't have the ability to work directly on.
