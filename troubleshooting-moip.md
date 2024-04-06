@@ -827,10 +827,13 @@ as pre-built binaries.
 ::: notes
 
 "Is it fast enough?" The specs say that the disk, CPU, RAM... name your
-component should be, but we all know reality doesn't match spec sheets.
-Even though IOMeter hasn't been updated in a while, it remains the best disk
-performance benchmarking tool readily available. Spend a bit of time working
-out a realistic test plan for your benchmark.
+component should be, but we all know reality doesn't match spec sheets. Even
+though IOMeter hasn't been updated in a while, it remains the best disk
+performance benchmarking tool readily available. Spend a bit of time working out
+a realistic test plan for your benchmark. You can simulate different phases of
+disk use. Generally, you can have as many workers to create I/O load as you have
+cores or vCPUs available to your test machine. Be careful about selecting disks
+to test, you don't want to put a system disk or project files in danger.
 
 For network performance tests, Iperf2 and Iperf3 have overlapping feature sets.
 Iperf2 is better for multicast and other media flows. Use Iperf3 for more
