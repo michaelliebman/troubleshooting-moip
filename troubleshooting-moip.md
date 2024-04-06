@@ -257,6 +257,14 @@ a troubleshooting model. Think of it as translator for between what you see in
 the wild and what you learn. Having the different perspectives helps with the
 theorizing steps that we just looked at.
 
+The upper three layers of the OSI model roughly correspond to problems or fixes
+in the application that you are troubleshooting. There's disagreement on whether
+the TCP/IP model includes the physical layer, but nothing works without it.
+That's where our cable checks come in. In the middle are the three layers that
+point you towards looking at the device protocol stack. Is the network mask
+correct? Are you getting the correct DNS answer? You get the idea of the clues
+that point here.
+
 :::
 
 ## Hardware Tools
