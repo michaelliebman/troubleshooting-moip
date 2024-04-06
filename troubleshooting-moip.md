@@ -51,6 +51,12 @@ we use for troubleshooting.
 
 ## The Troubleshooting Process & Getting Ready
 
+::: notes
+
+Let's get to it...
+
+:::
+
 ### It's not that different
 
 ![from traditional media systems![^credit-kozk]](images/process/robert-linder-uizuCGhJ1Rw-unsplash.jpg "TV Station KOZK control room in 1975")
