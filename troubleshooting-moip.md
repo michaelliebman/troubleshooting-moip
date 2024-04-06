@@ -834,7 +834,10 @@ out a realistic test plan for your benchmark.
 
 For network performance tests, Iperf2 and Iperf3 have overlapping feature sets.
 Iperf2 is better for multicast and other media flows. Use Iperf3 for more
-typical IT workload or public Internet tests.
+typical IT workload or public Internet tests. No matter which version you use,
+you need to install Iperf on two devices. One simulates a server and listens for
+incoming connections, while the other plays the client role and sends simulated
+data to the server.
 
 :::
 
