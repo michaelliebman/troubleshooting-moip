@@ -798,7 +798,7 @@ correct adjustment without a preferred server.
 Another common problem is using the built-in Windows time client. Do yourself a
 favor, disable that service and install the Meinberg port of the reference NTP
 tools. That client works, uses the same easy to distribute configuration file as
-the Linux version, and gives you `ntp` for basic monitoring.
+the Linux version, and gives you `ntpq` for basic monitoring.
 
 Meinberg also has a separate NTP monitoring tool, as well as free and paid PTP
 monitoring solutions. For PTP, you can use EBU LIST for detailed analysis.
