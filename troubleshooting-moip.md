@@ -789,7 +789,7 @@ on [Unsplash](https://unsplash.com/photos/a-row-of-wind-turbines-in-front-of-a-m
 Working with "real" network traffic isn't always possible or ideal. Packet
 generators let you synthesize or replay network traffic. One common use case is
 for load testing. Some packet generators can pump out *a lot* of flows, more
-than you can get going from those "real" devices.
+than you can reasonably get going by hand in our test setups.
 
 But commercial packet generators can be well beyond our budgets, and we need
 some packets to learn or experiment with. [Ostinato](https://ostinato.org/) is
