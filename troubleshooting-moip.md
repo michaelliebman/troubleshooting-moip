@@ -63,6 +63,15 @@ Let's get to it...
 
 [^credit-kozk]: Photo by [Robert Linder](https://unsplash.com/@rwlinder) on [Unsplash](https://unsplash.com/photos/a-desk-with-a-bunch-of-electronic-equipment-on-top-of-it-uizuCGhJ1Rw)
 
+::: notes
+
+The first tip is to remember that troubleshooting MoIP systems is not that
+different from working on traditional media systems. The process you follow and
+the techniques you use will feel familiar to you and build on the skills you
+already have.
+
+:::
+
 ### Check the cable
 
 ![Network Patch Bay[^credit-cable]](images/process/jordan-harrison-40XgDxBfYXM-unsplash.jpg)
