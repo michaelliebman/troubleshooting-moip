@@ -159,9 +159,11 @@ networking: A top-down approach, Eighth edition. Hoboken: Pearson,
 
 ::: notes
 
-Network simulators can be a little tricky to set up and resource hungry once
-running, but you can get hands-on experience with major manufacturer switches in
-realistic topologies.
+We all now how to get to Carnegie Hall, right? But how do you practice with MoIP
+systems? Network simulators can be a little tricky to set up and resource hungry
+once running, but you can get hands-on experience with major manufacturer
+switches in realistic topologies. GNS3 and EVE-NG have open source or free
+community editions available.
 
 Most network courses and texts start at the bottom of the OSI model and work
 their way up. Kurose and Ross take the rare, opposite approach of starting with
