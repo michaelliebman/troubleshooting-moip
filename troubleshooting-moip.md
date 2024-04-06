@@ -169,7 +169,8 @@ Most network courses and texts start at the bottom of the OSI model and work
 their way up. Kurose and Ross take the rare, opposite approach of starting with
 the application layer and working down. This can be more relatable to new
 network engineers. (Note that this most recent edition is only available as a
-physical or digital rental or a digital purchase.)
+physical or digital rental or a digital purchase.) Older editions are available
+used, and I've learned something from every edition I've looked at.
 
 :::
 
