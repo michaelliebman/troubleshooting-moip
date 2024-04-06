@@ -409,6 +409,13 @@ probably already in your toolkit.
 
 ## Software Techniques
 
+::: notes
+
+Let's turn our attention to tips and tricks for software-based troubleshooting
+techniques.
+
+:::
+
 ### Check the deets
 
 #### `ipconfig` & `netsh` (Windows)
