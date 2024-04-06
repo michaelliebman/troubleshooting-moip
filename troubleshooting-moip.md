@@ -997,6 +997,12 @@ docker network or even inside another container's namespace. You'll need to do
 that when you don't have those troubleshooting tools already built in to the
 problem container.
 
+If you still can't make sense of a Docker issue, it can help to go back to the
+basics. The `whoami` container, from the Traefik reverse proxy team, gives you
+all the building blocks of a real container --- latency, a JSON api, health
+checks --- stripped down to lightweight essentials. Get your network problem
+sorted out with `whoami` and then go back to your real container.
+
 :::
 
 ### Keep Searching
