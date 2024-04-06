@@ -13,14 +13,14 @@ monofont: Fira Code
 ### Topics
 
 :::::::::::::: {.columns}
-::: {.column width="%"}
+::: {.column width="50%"}
 
 * The Troubleshooting Process & Getting Ready
 * Hardware Tools
 * Software Techniques
 
 :::
-::: {.column width="%"}
+::: {.column width="50%"}
 
 ![[^credit-fast]](https://source.unsplash.com/xzLKOczi4As "Title: Time laps of cars on a road in Thailand at night")
 
