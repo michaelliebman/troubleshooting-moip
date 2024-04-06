@@ -955,7 +955,7 @@ facility.
 Whether you are trying to learn more, test new devices, or you are actively
 troubleshooting an issue, how many times have you wished you could set up your
 own router control system? In the MoIP world, we can actually do that, and there
-even is an easy button for it. Easy-NMOS is a docker compose-based recipe for
+even is an "easy button" for it. Easy-NMOS is a docker compose-based recipe for
 spinning up an NMOS registry, a virtual node, and the testing tool.
 
 Riedel also has a freely available browser for quick peeks into an NMOS
