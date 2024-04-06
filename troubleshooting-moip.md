@@ -925,6 +925,8 @@ for event-based APIs.
 * [sdpoker](https://github.com/AMWA-TV/sdpoker) for troubleshooting SDP files
 * AMWA NMOS [Testing Tool](https://specs.amwa.tv/nmos-testing/) for automated
 compliance testing
+* [Easy-NMOS](https://github.com/rhastie/easy-nmos): Docker compose for NMOS
+  registry, virtual node, & Testing Tool
 * Riedel [NMOS Explorer](https://www.riedel.net/en/downloads/firmware-software)
 for quick browsing devices
 * [EBU LIST](https://github.com/ebu/pi-list) for timing analysis, ANC decoding,
