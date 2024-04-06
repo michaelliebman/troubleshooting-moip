@@ -10,6 +10,15 @@ link-bibliography: true
 monofont: Fira Code
 ---
 
+::: notes
+
+Good morning. I want to quickly introduce myself. I'm a Principal Engineer on
+SirusXM's Media Content Engineering architecture team, where we design linear
+and file-based media technology systems that power the audio, metadata, and
+video content on all the SirusXM and Pandora distribution platforms.
+
+:::
+
 ### Topics
 
 :::::::::::::: {.columns}
@@ -30,13 +39,38 @@ on [Unsplash](hhttps://unsplash.com/photos/time-lapse-photography-of-cars-on-roa
 :::
 ::::::::::::::
 
+::: notes
+
+We're going to cover a lot of material in a short time, so hold on tight! First,
+we'll review the troubleshooting process and what you can do to get ready to
+work on MoIP systems. Then we will briefly look at the hardware tools network
+engineers use before going through a bunch of tips and tricks for the software
+we use for troubleshooting.
+
+:::
+
 ## The Troubleshooting Process & Getting Ready
+
+::: notes
+
+Let's get to it...
+
+:::
 
 ### It's not that different
 
 ![from traditional media systems![^credit-kozk]](images/process/robert-linder-uizuCGhJ1Rw-unsplash.jpg "TV Station KOZK control room in 1975")
 
 [^credit-kozk]: Photo by [Robert Linder](https://unsplash.com/@rwlinder) on [Unsplash](https://unsplash.com/photos/a-desk-with-a-bunch-of-electronic-equipment-on-top-of-it-uizuCGhJ1Rw)
+
+::: notes
+
+The first tip is to remember that troubleshooting MoIP systems is not that
+different from working on traditional media systems. The process you follow and
+the techniques you use will feel familiar to you and build on the skills you
+already have.
+
+:::
 
 ### Check the cable
 
@@ -223,6 +257,13 @@ theorizing steps that we just looked at.
 
 ## Hardware Tools
 
+::: notes
+
+We've prepared ourselves, now what are some hardware tools that can help with
+troubleshooting?
+
+:::
+
 ### Cable Testers
 
 :::::::::::::: {.columns}
@@ -382,6 +423,13 @@ probably already in your toolkit.
 :::
 
 ## Software Techniques
+
+::: notes
+
+Let's turn our attention to tips and tricks for software-based troubleshooting
+techniques.
+
+:::
 
 ### Check the deets
 
