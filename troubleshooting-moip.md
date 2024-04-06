@@ -153,8 +153,11 @@ physical or digital rental or a digital purchase.)
 
 ::: notes
 
-Note that the network-specific CompTIA method is nearly identical to the generic
-DECSAR method.
+Let's look at the steps we'll follow for troubleshooting networked systems. Note
+that the network-specific CompTIA method is nearly identical to the generic
+DECSAR method. We'll identify the problem, work up a theory about the cause,
+test that theory, create a plan for correcting the issue, and close out the
+documentation we've been keeping throughout the process.
 
 :::
 
@@ -384,14 +387,14 @@ probably already in your toolkit.
 Unless you have a remarkable memory of a small network, you are going to want to
 find out how the network is configured on a computer.
 
-On Windows, you do that
-with `ipconfig`, usually with the `/all`. That will print out the IP address,
-network mask, default router, DNS servers, and more for every network interface.
-You can also `/release` or `/renew` DHCP-assigned addresses, which you limit to
-specific interfaces. Windows interface names are long, so wildcards save some
-typing. Sometimes you need to clear the DNS cache with `/flushdns` to get a new
-record that has an unexpired TTL. If you need to script setting or getting the
-configuration, you can use `netsh`.
+On Windows, you do that with `ipconfig`, usually with the `/all` switch. That
+will print out the IP address, network mask, default router, DNS servers, and
+more for every network interface. You can also `/release` or `/renew`
+DHCP-assigned addresses, which you can limit to specific interfaces. Windows
+interface names are long, so wildcards save some typing. Sometimes you need to
+clear the DNS cache with `/flushdns` to get a new record that has an unexpired
+TTL. If you need to script setting or getting the configuration, you can use
+`netsh`.
 
 On Linux, older documentation talks about `ifconfig` (interface config) for
 getting most of the same information as Windows' `ipconfig`. But newer
@@ -431,8 +434,9 @@ run separately from `ifconfig` and `ipconfig`.
 After checking the configuration of a problem computer, you will want to check
 if you can reach another device. `ping` uses ICMP to send an **echo request**,
 wait for an **echo reply**, and measure the round trip time. The RTT tells you
-the latency of a connection. If you Captain Ramius's order and add `-t` to your
-ping, you can measure RTT over time and look for intermittent dropped packets.
+the latency of a connection. If you ignore Captain Ramius's order and add `-t`
+to your ping, you can measure RTT over time and look for intermittent dropped
+packets.
 
 Each "hop" on the path between devices can be the cause of dropped packets or
 high latency. `traceroute`/`tracert` manipulate the time-to-live (TTL) to ping
@@ -632,11 +636,12 @@ connections by port number (not name) destined for the 192.0.2.0 subnet.
 Before we talk about finding out what is going on with another computer on a
 network, proceed with caution. Make sure you have permission to use these tools.
 If your enterprise security team is doing their job, they will know what you are
-up to. Besides policy, depending on how you use these tools, they carry the risk
-of causing outages. Consider running these tools during planned maintenance
+up to. Besides being concerned about policy violation risks, there is another,
+familiar risk to consider. Depending on how you use these tools, they carry the
+risk of causing outages. Consider running these tools during planned maintenance
 windows and on offline systems.
 
-With that out of the way, let's talk about find out what is going on with
+With that out of the way, let's talk about how to find out what is going on with
 another device, especially one you don't have the ability to work directly on.
 (But you have permission to muck around, right?) You can use Nmap to scan for
 open ports, those programs waiting for incoming connections. Nmap can also
@@ -795,7 +800,7 @@ correct adjustment without a preferred server.
 Another common problem is using the built-in Windows time client. Do yourself a
 favor, disable that service and install the Meinberg port of the reference NTP
 tools. That client works, uses the same easy to distribute configuration file as
-the Linux version, and gives you `ntp` for basic monitoring.
+the Linux version, and gives you `ntpq` for basic monitoring.
 
 Meinberg also has a separate NTP monitoring tool, as well as free and paid PTP
 monitoring solutions. For PTP, you can use EBU LIST for detailed analysis.
@@ -861,9 +866,9 @@ for quick browsing devices
 
 ::: notes
 
-There are some great open source and freely available for NMOS and SMPTE ST 2110
-troubleshooting. Mentioned before, EBU LIST is great for analyzing your video
-and audio flows. Different vendors have different implementations and
+There are some great open source and freely available tools for NMOS and SMPTE
+ST 2110 troubleshooting. Mentioned before, EBU LIST is great for analyzing your
+video and audio flows. Different vendors have different implementations and
 interpretations of SDP descriptions, which sdpoker can help you reconcile. AMWA,
 the organization behind NMOS has also released an automated testing tool.
 
