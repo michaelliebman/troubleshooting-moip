@@ -945,8 +945,21 @@ for quick browsing devices
 There are some great open source and freely available tools for NMOS and SMPTE
 ST 2110 troubleshooting. Mentioned before, EBU LIST is great for analyzing your
 video and audio flows. Different vendors have different implementations and
-interpretations of SDP descriptions, which sdpoker can help you reconcile. AMWA,
-the organization behind NMOS has also released an automated testing tool.
+interpretations of SDP descriptions, which sdpoker can help you reconcile.
+
+AMWA, the organization behind NMOS has also released an automated testing tool.
+This is the same setup used during the JT-NM tested events that you can use for
+verifying compatibility for the devices and systems that you use in your
+facility.
+
+Whether you are trying to learn more, test new devices, or you are actively
+troubleshooting an issue, how many times have you wished you could set up your
+own router control system? In the MoIP world, we can actually do that, and there
+even is an easy button for it. Easy-NMOS is a docker compose-based recipe for
+spinning up an NMOS registry, a virtual node, and the testing tool.
+
+Riedel also has a freely available browser for quick peeks into an NMOS
+registry.
 
 :::
 
