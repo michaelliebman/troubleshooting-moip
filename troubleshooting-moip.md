@@ -242,6 +242,13 @@ theorizing steps that we just looked at.
 
 ## Hardware Tools
 
+::: notes
+
+We've prepared ourselves, now what are some hardware tools that can help with
+troubleshooting?
+
+:::
+
 ### Cable Testers
 
 :::::::::::::: {.columns}
