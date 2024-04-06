@@ -864,9 +864,9 @@ for quick browsing devices
 
 ::: notes
 
-There are some great open source and freely available for NMOS and SMPTE ST 2110
-troubleshooting. Mentioned before, EBU LIST is great for analyzing your video
-and audio flows. Different vendors have different implementations and
+There are some great open source and freely available tools for NMOS and SMPTE
+ST 2110 troubleshooting. Mentioned before, EBU LIST is great for analyzing your
+video and audio flows. Different vendors have different implementations and
 interpretations of SDP descriptions, which sdpoker can help you reconcile. AMWA,
 the organization behind NMOS has also released an automated testing tool.
 
