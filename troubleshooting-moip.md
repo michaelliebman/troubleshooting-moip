@@ -12,9 +12,23 @@ monofont: Fira Code
 
 ### Topics
 
+:::::::::::::: {.columns}
+::: {.column width="50%"}
+
 * The Troubleshooting Process & Getting Ready
 * Hardware Tools
 * Software Techniques
+
+:::
+::: {.column width="50%"}
+
+![[^credit-fast]](https://source.unsplash.com/xzLKOczi4As "Title: Time laps of cars on a road in Thailand at night")
+
+[^credit-fast]: Photo by [jet dela cruz](https://unsplash.com/@jetjetdelacruz)
+on [Unsplash](hhttps://unsplash.com/photos/time-lapse-photography-of-cars-on-road-during-night-time-xzLKOczi4As)
+
+:::
+::::::::::::::
 
 ## The Troubleshooting Process & Getting Ready
 
