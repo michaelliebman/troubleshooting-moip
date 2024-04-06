@@ -39,6 +39,16 @@ on [Unsplash](hhttps://unsplash.com/photos/time-lapse-photography-of-cars-on-roa
 :::
 ::::::::::::::
 
+::: notes
+
+We're going to cover a lot of material in a short time, so hold on tight! First,
+we'll review the troubleshooting process and what you can do to get ready to
+work on MoIP systems. Then we will briefly look at the hardware tools network
+engineers use before going through a bunch of tips and tricks for the software
+we use for troubleshooting.
+
+:::
+
 ## The Troubleshooting Process & Getting Ready
 
 ### It's not that different
