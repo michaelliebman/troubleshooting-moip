@@ -10,6 +10,15 @@ link-bibliography: true
 monofont: Fira Code
 ---
 
+::: notes
+
+Good morning. I want to quickly introduce myself. I'm a Principal Engineer on
+SirusXM's Media Content Engineering architecture team, where we design linear
+and file-based media technology systems that power the audio, metadata, and
+video content on all the SirusXM and Pandora distribution platforms.
+
+:::
+
 ### Topics
 
 :::::::::::::: {.columns}
