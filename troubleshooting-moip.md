@@ -1031,7 +1031,7 @@ sorted out with `whoami` and then go back to your real container.
 
 The last tip I'll leave you with is to keep your eyes open. You never know when
 you'll find the next tool or technique that will help you solve problems faster
-or deal with more complex or just plain weird issues. Stress test mutlicast?
+or deal with more complex or just plain weird issues. Stress test multicast?
 Get a hammer. Need a down and dirty RTP stream? Fire up VLC. There's lots more
 Awesome out there.
 
