@@ -14,7 +14,7 @@ monofont: Fira Code
 
 * The Troubleshooting Process & Getting Ready
 * Hardware Tools
-* Software Tools
+* Software Techniques
 
 ## The Troubleshooting Process & Getting Ready
 
@@ -367,7 +367,7 @@ probably already in your toolkit.
 
 :::
 
-## Software Tools
+## Software Techniques
 
 ### Check the deets
 
