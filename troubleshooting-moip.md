@@ -455,6 +455,9 @@ techniques.
 
 * `ip` combines `ifconfig` with `route` & `arp`
 * `ip` has a simpler, more consistent interface [@kenlonIpVsIfconfig2023]
+* `ip a`: list all addresses
+* `ip a show up`: list addresses on active interfaces
+* `ip -ts mon`: monitor network changes
 
 ::: notes
 
