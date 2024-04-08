@@ -786,9 +786,9 @@ fast and without unnecessary complexity.
 ::: notes
 
 We'll be covering packet capture and analysis in more depth later today, but I
-do want to share one Wireshark tip with you. Use *capture* filters as much as
-you can to keep your memory and file sizes manageable. Display filters are
-easier to work with and more expressive, but media systems are chatty,
+do want to share one Wireshark tip with you. Use *capture*, or pcap, filters as
+much as you can to keep your memory and file sizes manageable. Display filters
+are easier to work with and more expressive, but media systems are chatty,
 generating a lot of packets that take some sifting. I try to start with a short,
 unfiltered capture, figure out the packets I'm generally interested in, and then
 run a longer capture that filters out as much of the noise as possible.
