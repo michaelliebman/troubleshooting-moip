@@ -480,11 +480,11 @@ it combines information about the `arp` cache and `route` table that you need to
 run separately from `ifconfig` and `ipconfig`. You still need to use other
 utilities for DHCP and DNS.
 
-You can shorten subcommands for `ip`. Listing all IP addresses is as quick as
-`ip a`. If you want to filter the address list, say to print active interfaces,
-add `show` plus the query, in this case `up`. Keep track of changes to the
-network connections with `ip mon`. Adding `-ts` gives you a scroll-friendly
-timestamp.
+Like with most network device command line interfaces, you can shorten
+subcommands for `ip`. Listing all IP addresses is as quick as `ip a`. If you
+want to filter the address list, say to print active interfaces, add `show` plus
+the query, in this case `up`. Keep track of changes to the network connections
+with `ip mon`. Adding `-ts` gives you a scroll-friendly timestamp.
 
 :::
 
