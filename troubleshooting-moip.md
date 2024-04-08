@@ -793,6 +793,9 @@ generating a lot of packets that take some sifting. I try to start with a short,
 unfiltered capture, figure out the packets I'm generally interested in, and then
 run a longer capture that filters out as much of the noise as possible.
 
+It can also be more convenient to run a packet capture on the command line with
+`tcpdump` and then analyze it later with Wireshark.
+
 :::
 
 ### Packet Generators
