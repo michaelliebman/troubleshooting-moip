@@ -648,12 +648,20 @@ situation or consider setting up `vaping` for a similar self-hosted test.
 You will still frequently work with IP addresses, but DNS is an important part
 of modern MoIP systems. You can perform basic DNS queries with `nslookup`. When
 you need to look up more specialized or complex records, like NMOS can use, you
-will need to `dig` for the information. With `dig` you can request all records
-for a name, clearly specify the DNS server to query, and format the response for
-the situation. You can even follow the resolution path from root server to
-authoritative server, for a sort of DNS traceroute. If you have a lot of DNS
-queries to run, you can enter interactive mode by leaving off the target
-address.
+will need to `dig` for the information. With `dig` you can request a specific
+record type, like `PTR` or `TXT` (used by NMOS), or all records for a name by
+with the pseudotype of `ALL`.
+
+`nslookup` can be confusing when you need to query a specific DNS server. With
+`dig`, you identify the DNS server by prefacing it with an `@` symbol. `dig`
+defaults to printing a lot of information about your query, but sometimes that's
+TMI. Fortunately, you can format the response for the situation. `+short` gives
+you the answer to the query with nothing else, great for scripting. If you still
+want a longer view of the answer, but without the default query information,
+there are options for that, too. You can even follow the resolution path from
+root server to authoritative server, for a sort of DNS traceroute. If you have a
+lot of DNS queries to run, you can enter interactive mode by leaving off the
+target address.
 
 :::
 
