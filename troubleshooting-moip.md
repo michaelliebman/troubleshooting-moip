@@ -529,7 +529,8 @@ Each "hop" on the path between devices can be the cause of dropped packets or
 high latency. `traceroute`/`tracert` manipulate the time-to-live (TTL) to ping
 *router* hops one by one. Note the emphasis on routers there. You can't directly
 measure the impact of any switches or other layer 2 devices with `ping` or
-`traceroute`.
+`traceroute`. Router configurations may prevent a traceroute from ever
+finishing. Use `-h` on Windows and `-m` on Linux to set the hop limit.
 
 :::
 
