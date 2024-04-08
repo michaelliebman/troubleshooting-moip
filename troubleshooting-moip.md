@@ -477,7 +477,8 @@ On Linux, older documentation talks about `ifconfig` (interface config) for
 getting most of the same information as Windows' `ipconfig`. But newer
 distributions ship with the `ip` utility. You will find it easier to use, plus
 it combines information about the `arp` cache and `route` table that you need to
-run separately from `ifconfig` and `ipconfig`.
+run separately from `ifconfig` and `ipconfig`. You still need to use other
+utilities for DHCP and DNS.
 
 :::
 
