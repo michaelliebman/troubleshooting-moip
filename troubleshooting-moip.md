@@ -651,7 +651,9 @@ you need to look up more specialized or complex records, like NMOS can use, you
 will need to `dig` for the information. With `dig` you can request all records
 for a name, clearly specify the DNS server to query, and format the response for
 the situation. You can even follow the resolution path from root server to
-authoritative server, for a sort of DNS traceroute.
+authoritative server, for a sort of DNS traceroute. If you have a lot of DNS
+queries to run, you can enter interactive mode by leaving off the target
+address.
 
 :::
 
