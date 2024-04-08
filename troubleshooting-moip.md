@@ -726,6 +726,8 @@ connections by port number (not name) destined for the 192.0.2.0 subnet.
 #### Port scanning: [Nmap](https://nmap.org/)
 
 * Scan multiple ports & addresses: `nmap -p 80,25,443,110 198.51.100.20-100`
+* TCP Scan: `-sS` (SYN) or `-sT` (Connect)
+* UDP Scan: `-sU`
 * Service & version detection: `-sV`
 * OS detection: `-O`
 
@@ -747,9 +749,10 @@ maintenance windows and on offline systems.
 With that out of the way, let's talk about how to find out what is going on with
 another device, especially one you don't have the ability to work directly on.
 (But you have permission to muck around, right?) You can use Nmap to scan for
-open ports, those programs waiting for incoming connections. Nmap can also
-guess at the specific service and version running or detect the OS of the
-scanned device.
+open ports, those programs waiting for incoming connections. Specify the scan
+type, UDP or one of the TCP methods, depending on what service you want to ping.
+Nmap can also guess at the specific service and version running or detect the OS
+of the scanned device.
 
 Vulnerability scanning is an essential part of security preparedness. You want
 to know what your exposure is, so you can take the right mitigation steps.
