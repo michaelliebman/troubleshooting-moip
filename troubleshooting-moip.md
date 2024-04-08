@@ -519,10 +519,11 @@ After checking the configuration of a problem computer, you will want to check
 if you can reach another device. `ping` uses ICMP to send an **echo request**,
 wait for an **echo reply**, and measure the round trip time. The RTT tells you
 the latency of a connection. If you ignore Captain Ramius's order and add `-t`
-to your ping, you can measure RTT over time and look for intermittent dropped
-packets. If you are pinging by name, in particular outside your own network,
-`ping` may default to an IPv6 address. Use `-4` to force pinging the target's
-IPv4 address.
+to your Windows ping, you can measure RTT over time and look for intermittent
+dropped packets. Linux defaults to infinite pings. Use [Ctrl+C]{.smallcaps} to
+end the ping and show the calculated statistics. If you are pinging by name, in
+particular outside your own network, `ping` may default to an IPv6 address. Use
+`-4` to force pinging the target's IPv4 address.
 
 Each "hop" on the path between devices can be the cause of dropped packets or
 high latency. `traceroute`/`tracert` manipulate the time-to-live (TTL) to ping
