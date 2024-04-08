@@ -617,8 +617,11 @@ right one to test with for your situation.
 
 Want to do a quick, longer term (up to about a month) test from the outside?
 DSLReports still runs a SmokePing service, which does periodic packet loss and
-latency tests. Check the terms of service to make sure it works for your
-situation or consider setting up `vaping` for a similar self-hosted test.
+latency tests. The higher on the graph, the higher the latency. The darker the
+"smoke", the more pings with a given latency. The smokier the graph, the more
+jitter there is. Before using the DSLReports service, check the terms of service
+to make sure it works for your situation or consider setting up `vaping` for a
+similar self-hosted test.
 
 :::
 
