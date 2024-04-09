@@ -954,10 +954,24 @@ monitoring solutions. For PTP, you can use EBU LIST for detailed analysis.
 
 ### Multicast
 
+:::::::::::::: {.columns}
+::: {.column width="50%"}
+
 * Use [VLC to send RTP](https://support.adder.com/tiki/tiki-index.php?page=Network%3A%20Multicast%20test%20using%20VLC)
 * Stress test multicast with [Multicast Hammer](https://support.pelco.com/s/article/Using-Multicast-Hammer-1538586730634?language=en_US)
 * [Simple Command Line Multicast Testing Tool](https://github.com/enclave-networks/multicast-test#readme)
   (Windows/Linux)
+
+:::
+::: {.column width="50%"}
+
+![[^credit-screens]](https://source.unsplash.com/3uQWtvUPjyg "Title: Assorted CRT monitors")
+
+[^credit-screens]: Photo by [Rubenz Arizta](https://unsplash.com/@ayakoz) on
+[Unsplash](https://unsplash.com/photos/assorted-crt-monitor-3uQWtvUPjyg)
+
+:::
+::::::::::::::
 
 ::: notes
 
