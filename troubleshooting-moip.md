@@ -476,14 +476,6 @@ techniques.
 * `/release` & `/renew`: use wildcards for interface
 * `/flushdns`: Force clearing DNS cache
 
-#### `ip` & `ifconfig` (Linux)
-
-* `ip` combines `ifconfig` with `route` & `arp`
-* `ip` has a simpler, more consistent interface [@kenlonIpVsIfconfig2023]
-* `ip a`: list all addresses
-* `ip a show up`: list addresses on active interfaces
-* `ip -ts mon`: monitor network changes
-
 ::: notes
 
 Unless you have a remarkable memory of a small network, you are going to want to
@@ -497,6 +489,20 @@ interface names are long, so wildcards save some typing. Sometimes you need to
 clear the DNS cache with `/flushdns` to get a new record that has an unexpired
 TTL. If you need to script setting or getting the configuration, you can use
 `netsh`.
+
+:::
+
+### Just the facts
+
+#### `ip` & `ifconfig` (Linux)
+
+* `ip` combines `ifconfig` with `route` & `arp`
+* `ip` has a simpler, more consistent interface [@kenlonIpVsIfconfig2023]
+* `ip a`: list all addresses
+* `ip a show up`: list addresses on active interfaces
+* `ip -ts mon`: monitor network changes
+
+::: notes
 
 On Linux, older documentation talks about `ifconfig` (interface config) for
 getting most of the same information as Windows' `ipconfig`. But newer
