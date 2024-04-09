@@ -437,8 +437,8 @@ probably already in your toolkit.
   about their preferences, so find one that is right for you.
 * 110 punch down tools are important for patch bays and keystone jacks. Make
   sure you understand which way the cut side should face.
-* An optical power meter or a visual fault locator is the optical equivalent of
-  a continuity tester.
+* An optical power meter or a visual fault locator are the optical equivalents
+  of a continuity tester.
 * I haven't used a loopback adapter often, but I am glad that I always put it
   back in the same pocket in my tool bag.
 * Tone generators get a workout when the electricians labelled all the cables
