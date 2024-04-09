@@ -165,6 +165,17 @@ once running, but you can get hands-on experience with major manufacturer
 switches in realistic topologies. GNS3 and EVE-NG have open source or free
 community editions available.
 
+Manufacturers have different policies on using their hardware OS in a simulator.
+Some require an active support contract to get access to downloads, and others
+offer simulator-specific versions for training purposes. When trying to learn
+outside of work, you may need to substitute open source components, like the
+OpnSense firewall or the Open vSwitch virtual software switch, for commercial
+components you don't have access to. In this example, I started building a
+spine-and-leaf network with simulated Arista switches on an Intel NUC-style
+computer hosting the GNS3 VM. I was able to test basic connectivity with ease,
+but I was probably pushing the limits of my hardware if I tried to build a fully
+redundant red/blue network.
+
 Most network courses and texts start at the bottom of the OSI model and work
 their way up. Kurose and Ross take the rare, opposite approach of starting with
 the application layer and working down. This can be more relatable to new
