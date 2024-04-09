@@ -468,9 +468,9 @@ techniques.
 
 :::
 
-### Check the deets
+### Check the deets (Windows)
 
-#### `ipconfig` & `netsh` (Windows)
+#### `ipconfig` & `netsh`
 
 * `/all`: Prints everything
 * `/release` & `/renew`: use wildcards for interface
@@ -492,9 +492,9 @@ TTL. If you need to script setting or getting the configuration, you can use
 
 :::
 
-### Just the facts
+### Just the facts (Linux)
 
-#### `ip` & `ifconfig` (Linux)
+#### `ip` & `ifconfig`
 
 * `ip` combines `ifconfig` with `route` & `arp`
 * `ip` has a simpler, more consistent interface [@kenlonIpVsIfconfig2023]
