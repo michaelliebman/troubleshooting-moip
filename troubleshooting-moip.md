@@ -836,7 +836,6 @@ It can also be more convenient to run a packet capture on the command line with
 * [Keysight](https://www.keysight.com/us/en/products/network-test/protocol-load-test.html)
   (formerly Ixia): :moneybag::moneybag::moneybag:
 * [Ostinato](https://ostinato.org/): Build yourself or reasonably priced binaries
-* * Use [VLC to send RTP](https://support.adder.com/tiki/tiki-index.php?page=Network%3A%20Multicast%20test%20using%20VLC)
 
 :::
 ::: {.column width="50%"}
@@ -862,11 +861,6 @@ some packets to learn or experiment with. [Ostinato](https://ostinato.org/) is
 open source, free as in beer if you build it yourself, or affordably available
 as pre-built binaries.
 
-Sometimes all you need a barebones RTP stream for a quick test. VLC can stream
-files over RTP. Choose your source file, enter your multicast address, set your
-media configuration, and your stream is going. Use VLC, or another program to
-receive the stream on another device.
-
 :::
 
 ### Performance Benchmarking
@@ -884,7 +878,6 @@ receive the stream on another device.
 
 * [Iperf2](https://sourceforge.net/projects/iperf2/): Multicast & other media flows
 * [Iperf3](https://github.com/esnet/iperf): IT workloads or public Internet
-* Stress test multicast with [Multicast Hammer](https://support.pelco.com/s/article/Using-Multicast-Hammer-1538586730634?language=en_US)
 
 :::
 ::: {.column width="50%"}
@@ -913,13 +906,6 @@ typical IT workload or public Internet tests. No matter which version you use,
 you need to install Iperf on two devices. One simulates a server and listens for
 incoming connections, while the other plays the client role and sends simulated
 data to the server.
-
-Multicast Hammer helps you stress test multicast networking. Like Iperf, it can
-operate in client or server mode. When acting as a client, you specify the
-number of multicast groups to subscribe, the address of the first group, and the
-port number to listen on. Multicast Hammer then subscribes to the sequential
-addresses starting at the one you specified. The server works similarly, with
-the addition of transmit speed, packet size, and burst options.
 
 :::
 
@@ -963,6 +949,48 @@ the Linux version, and gives you `ntpq` for basic monitoring.
 
 Meinberg also has a separate NTP monitoring tool, as well as free and paid PTP
 monitoring solutions. For PTP, you can use EBU LIST for detailed analysis.
+
+:::
+
+### Multicast
+
+:::::::::::::: {.columns}
+::: {.column width="50%"}
+
+* Use [VLC to send RTP](https://support.adder.com/tiki/tiki-index.php?page=Network%3A%20Multicast%20test%20using%20VLC)
+* Stress test multicast with [Multicast Hammer](https://support.pelco.com/s/article/Using-Multicast-Hammer-1538586730634?language=en_US)
+* [Simple Command Line Multicast Testing Tool](https://github.com/enclave-networks/multicast-test#readme)
+  (Windows/Linux)
+
+:::
+::: {.column width="50%"}
+
+![[^credit-screens]](https://source.unsplash.com/3uQWtvUPjyg "Title: Assorted CRT monitors")
+
+[^credit-screens]: Photo by [Rubenz Arizta](https://unsplash.com/@ayakoz) on
+[Unsplash](https://unsplash.com/photos/assorted-crt-monitor-3uQWtvUPjyg)
+
+:::
+::::::::::::::
+
+::: notes
+
+Sometimes all you need a barebones RTP stream for a quick test. VLC can stream
+files over RTP. Choose your source file, enter your multicast address, set your
+media configuration, and your stream is going. Use VLC, or another program to
+receive the stream on another device.
+
+Multicast Hammer helps you stress test multicast networking. Like Iperf, it can
+operate in client or server mode. When acting as a client, you specify the
+number of multicast groups to subscribe, the address of the first group, and the
+port number to listen on. Multicast Hammer then subscribes to the sequential
+addresses starting at the one you specified. The server works similarly, with
+the addition of transmit speed, packet size, and burst options.
+
+We talked about iperf for benchmarking multicast before, but if you need a
+multicast test that isn't at all finicky and lets you choose the network
+interface to use, Simple Command Line Multicast Testing Tool does what it says
+on the tin.
 
 :::
 
