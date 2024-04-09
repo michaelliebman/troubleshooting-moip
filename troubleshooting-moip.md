@@ -743,8 +743,8 @@ nearly every Windows device that should still be in use.
 
 For Linux, you can still use `netstat`, though the syntax is a little different
 from the Windows command. The newer `ss` utility gives you more control over
-that long list of connections with filters. The command above will show all TCP
-connections by port number (not name) destined for the 192.0.2.0 subnet.
+that long list of connections with filters. The command you see here will show
+all TCP connections by port number (not name) destined for the 192.0.2.0 subnet.
 
 :::
 
