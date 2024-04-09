@@ -982,6 +982,13 @@ open source testers have recently made user un-friendly changes, so I can't
 strongly recommend one right now. There are plenty of choices depending on your
 needs and preferences.
 
+* Milkman is modular, offering a variety of transport and other useful plugins.
+* Bruno is an offline, file-based storage API tool. Note that the developers are
+  planning to release some transports that are of interest to professional media
+  networks in a freemium version
+* insomnium forked one of the popular API tools from before the problematic
+  changes, but hasn't had active development since then.
+
 The second tip for API troubleshooting is you should try to work from formal API
 specifications, often in the form of OpenAPI descriptions or smithy contracts
 for event-based APIs.
