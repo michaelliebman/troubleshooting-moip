@@ -923,6 +923,11 @@ data to the server.
 :::
 ::: {.column width="50%"}
 
+![[^credit-boatgauge]](https://source.unsplash.com/-yBvef_mAaQ "Title: Analog gauges")
+
+[^credit-boatgauge]: Photo by [Mikhail McVerry](https://unsplash.com/@mcverry)
+on [Unsplash](https://unsplash.com/photos/black-speedometer--yBvef_mAaQ)
+
 :::
 ::::::::::::::
 
