@@ -956,6 +956,8 @@ monitoring solutions. For PTP, you can use EBU LIST for detailed analysis.
 
 * Use [VLC to send RTP](https://support.adder.com/tiki/tiki-index.php?page=Network%3A%20Multicast%20test%20using%20VLC)
 * Stress test multicast with [Multicast Hammer](https://support.pelco.com/s/article/Using-Multicast-Hammer-1538586730634?language=en_US)
+* [Simple Command Line Multicast Testing Tool](https://github.com/enclave-networks/multicast-test#readme)
+  (Windows/Linux)
 
 ::: notes
 
@@ -970,6 +972,11 @@ number of multicast groups to subscribe, the address of the first group, and the
 port number to listen on. Multicast Hammer then subscribes to the sequential
 addresses starting at the one you specified. The server works similarly, with
 the addition of transmit speed, packet size, and burst options.
+
+We talked about iperf for benchmarking multicast before, but if you need a
+multicast test that isn't at all finicky and lets you choose the network
+interface to use, Simple Command Line Multicast Testing Tool does what it says
+on the tin.
 
 :::
 
