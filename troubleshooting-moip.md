@@ -864,6 +864,7 @@ as pre-built binaries.
 
 * [Iperf2](https://sourceforge.net/projects/iperf2/): Multicast & other media flows
 * [Iperf3](https://github.com/esnet/iperf): IT workloads or public Internet
+* Stress test multicast with [Multicast Hammer](https://support.pelco.com/s/article/Using-Multicast-Hammer-1538586730634?language=en_US)
 
 :::
 ::: {.column width="50%"}
@@ -892,6 +893,13 @@ typical IT workload or public Internet tests. No matter which version you use,
 you need to install Iperf on two devices. One simulates a server and listens for
 incoming connections, while the other plays the client role and sends simulated
 data to the server.
+
+Multicast Hammer helps you stress test multicast networking. Like Iperf, it can
+operate in client or server mode. When acting as a client, you specify the
+number of multicast groups to subscribe, the address of the first group, and the
+port number to listen on. Multicast Hammer then subscribes to the sequential
+addresses starting at the one you specified. The server works similarly, with
+the addition of transmit speed, packet size, and burst options.
 
 :::
 
@@ -1067,7 +1075,6 @@ sorted out with `whoami` and then go back to your real container.
 :::::::::::::: {.columns}
 ::: {.column width="50%"}
 
-* Stress test multicast with [Multicast Hammer](https://support.pelco.com/s/article/Using-Multicast-Hammer-1538586730634?language=en_US)
 * Use [VLC to send RTP](https://support.adder.com/tiki/tiki-index.php?page=Network%3A%20Multicast%20test%20using%20VLC)
 * Check [Awesome Real Time Communications](https://github.com/rtckit/awesome-rtc#readme)
   for SIP tools
@@ -1091,9 +1098,8 @@ sorted out with `whoami` and then go back to your real container.
 
 The last tip I'll leave you with is to keep your eyes open. You never know when
 you'll find the next tool or technique that will help you solve problems faster
-or deal with more complex or just plain weird issues. Stress test multicast?
-Get a hammer. Need a down and dirty RTP stream? Fire up VLC. There's lots more
-Awesome out there.
+or deal with more complex or just plain weird issues. There's lots more Awesome
+out there.
 
 :::
 
