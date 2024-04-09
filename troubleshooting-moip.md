@@ -822,6 +822,7 @@ It can also be more convenient to run a packet capture on the command line with
 * [Keysight](https://www.keysight.com/us/en/products/network-test/protocol-load-test.html)
   (formerly Ixia): :moneybag::moneybag::moneybag:
 * [Ostinato](https://ostinato.org/): Build yourself or reasonably priced binaries
+* * Use [VLC to send RTP](https://support.adder.com/tiki/tiki-index.php?page=Network%3A%20Multicast%20test%20using%20VLC)
 
 :::
 ::: {.column width="50%"}
@@ -846,6 +847,11 @@ But commercial packet generators can be well beyond our budgets, and we need
 some packets to learn or experiment with. [Ostinato](https://ostinato.org/) is
 open source, free as in beer if you build it yourself, or affordably available
 as pre-built binaries.
+
+Sometimes all you need a barebones RTP stream for a quick test. VLC can stream
+files over RTP. Choose your source file, enter your multicast address, set your
+media configuration, and your stream is going. Use VLC, or another program to
+receive the stream on another device.
 
 :::
 
@@ -1075,7 +1081,6 @@ sorted out with `whoami` and then go back to your real container.
 :::::::::::::: {.columns}
 ::: {.column width="50%"}
 
-* Use [VLC to send RTP](https://support.adder.com/tiki/tiki-index.php?page=Network%3A%20Multicast%20test%20using%20VLC)
 * Check [Awesome Real Time Communications](https://github.com/rtckit/awesome-rtc#readme)
   for SIP tools
 * Find lots of [Awesome Broadcasting](https://github.com/ebu/awesome-broadcasting#readme)
