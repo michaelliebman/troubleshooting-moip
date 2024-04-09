@@ -1025,10 +1025,10 @@ monitoring solutions. For PTP, you can use EBU LIST for detailed analysis.
 
 ::: notes
 
-Sometimes all you need a barebones RTP stream for a quick test. VLC can stream
-files over RTP. Choose your source file, enter your multicast address, set your
-media configuration, and your stream is going. Use VLC, or another program to
-receive the stream on another device.
+Sometimes all you need is a barebones RTP stream for a quick test. VLC can
+stream files over RTP. Choose your source file, enter your multicast address,
+set your media configuration, and your stream is going. Use VLC, or another
+program to receive the stream on another device.
 
 Multicast Hammer helps you stress test multicast networking. Like Iperf, it can
 operate in client or server mode. When acting as a client, you specify the
