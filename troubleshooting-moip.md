@@ -131,7 +131,8 @@ prepared with the knowledge and tools for the situation.
 * Install any software you need --- and there's a *bunch* we are going to cover
   --- before you need it
 * Consider preparing a USB bootable tool kit. Ventoy makes it easy to not have
-  to pick one. Instead, you can fill a big thumb drive with a variety.
+  to pick one. Instead, you can fill a big thumb drive with a variety, like the
+  ones listed here.
 
 :::
 
@@ -158,15 +159,18 @@ networking: A top-down approach, Eighth edition. Hoboken: Pearson,
 
 ::: notes
 
-Network simulators can be a little tricky to set up and resource hungry once
-running, but you can get hands-on experience with major manufacturer switches in
-realistic topologies.
+We all now how to get to Carnegie Hall, right? But how do you practice with MoIP
+systems? Network simulators can be a little tricky to set up and resource hungry
+once running, but you can get hands-on experience with major manufacturer
+switches in realistic topologies. GNS3 and EVE-NG have open source or free
+community editions available.
 
 Most network courses and texts start at the bottom of the OSI model and work
 their way up. Kurose and Ross take the rare, opposite approach of starting with
 the application layer and working down. This can be more relatable to new
 network engineers. (Note that this most recent edition is only available as a
-physical or digital rental or a digital purchase.)
+physical or digital rental or a digital purchase.) Older editions are available
+used, and I've learned something from every edition I've looked at.
 
 :::
 
@@ -252,6 +256,14 @@ I find it useful to translate the formal OSI and TCP/IP models for networks into
 a troubleshooting model. Think of it as translator for between what you see in
 the wild and what you learn. Having the different perspectives helps with the
 theorizing steps that we just looked at.
+
+The upper three layers of the OSI model roughly correspond to problems or fixes
+in the application that you are troubleshooting. There's disagreement on whether
+the TCP/IP model includes the physical layer, but nothing works without it.
+That's where our cable checks come in. In the middle are the three layers that
+point you towards looking at the device protocol stack. Is the network mask
+correct? Are you getting the correct DNS answer? You get the idea of the clues
+that point here.
 
 :::
 
@@ -420,6 +432,20 @@ OTDR.
 Most of the other tools you need for working on professional media networks are
 probably already in your toolkit.
 
+* We all have a preferred style of wire stripper.
+* RJ45 crimp tools come in a variety of styles. I'm sure people get religious
+  about their preferences, so find one that is right for you.
+* 110 punch down tools are important for patch bays and keystone jacks. Make
+  sure you understand which way the cut side should face.
+* An optical power meter or a visual fault locator are the optical equivalents
+  of a continuity tester.
+* I haven't used a loopback adapter often, but I am glad that I always put it
+  back in the same pocket in my tool bag.
+* Tone generators get a workout when the electricians labelled all the cables
+  "1".
+
+And I hope we've all learned how to build better racks than these.
+
 :::
 
 ## Software Techniques
@@ -443,6 +469,9 @@ techniques.
 
 * `ip` combines `ifconfig` with `route` & `arp`
 * `ip` has a simpler, more consistent interface [@kenlonIpVsIfconfig2023]
+* `ip a`: list all addresses
+* `ip a show up`: list addresses on active interfaces
+* `ip -ts mon`: monitor network changes
 
 ::: notes
 
@@ -462,7 +491,14 @@ On Linux, older documentation talks about `ifconfig` (interface config) for
 getting most of the same information as Windows' `ipconfig`. But newer
 distributions ship with the `ip` utility. You will find it easier to use, plus
 it combines information about the `arp` cache and `route` table that you need to
-run separately from `ifconfig` and `ipconfig`.
+run separately from `ifconfig` and `ipconfig`. You still need to use other
+utilities for DHCP and DNS.
+
+Like with most network device command line interfaces, you can shorten
+subcommands for `ip`. Listing all IP addresses is as quick as `ip a`. If you
+want to filter the address list, say to print active interfaces, add `show` plus
+the query, in this case `up`. Keep track of changes to the network connections
+with `ip mon`. Adding `-ts` gives you a scroll-friendly timestamp.
 
 :::
 
@@ -497,14 +533,18 @@ After checking the configuration of a problem computer, you will want to check
 if you can reach another device. `ping` uses ICMP to send an **echo request**,
 wait for an **echo reply**, and measure the round trip time. The RTT tells you
 the latency of a connection. If you ignore Captain Ramius's order and add `-t`
-to your ping, you can measure RTT over time and look for intermittent dropped
-packets.
+to your Windows ping, you can measure RTT over time and look for intermittent
+dropped packets. Linux defaults to infinite pings. Use [Ctrl+C]{.smallcaps} to
+end the ping and show the calculated statistics. If you are pinging by name, in
+particular outside your own network, `ping` may default to an IPv6 address. Use
+`-4` to force pinging the target's IPv4 address.
 
 Each "hop" on the path between devices can be the cause of dropped packets or
 high latency. `traceroute`/`tracert` manipulate the time-to-live (TTL) to ping
 *router* hops one by one. Note the emphasis on routers there. You can't directly
 measure the impact of any switches or other layer 2 devices with `ping` or
-`traceroute`.
+`traceroute`. Router configurations may prevent a traceroute from ever
+finishing. Use `-h` on Windows and `-m` on Linux to set the hop limit.
 
 :::
 
@@ -513,7 +553,7 @@ measure the impact of any switches or other layer 2 devices with `ping` or
 :::::::::::::: {.columns}
 ::: {.column width="50%"}
 
-#### `pathping` (Windows)
+#### `pathping` (Windows) / `mtr` (Linux)
 
 * `ping` and `tracert` mashed together
 * hop behavior over time
@@ -537,9 +577,11 @@ Sometimes `ping` and `traceroute` don't give you the clues you are looking for.
 ICMP pings aren't the same as TCP or UDP. You can get `ping`-like tests with
 Nmap, which we'll cover later.
 
-On Windows, `ping` and `tracert` will give you slightly different views of the
-network, so why not get the best of both worlds? PathPing gives you individual
-hop statistics over a longer period of time.
+`ping` and `tracert` will give you slightly different views of the network, so
+why not get the best of both worlds? On Windows, PathPing gives you individual
+hop statistics over a longer period of time. My Trace Route (`mtr`) will give
+you similar measurements on Linux. Note that you will need to install it as it
+isn't a standard utility.
 
 Linux lets you test layer 2 connectivity with `arping`. Address Resolution
 Protocol maps MAC addresses to IP addresses. Give `arping` an IP address, it
@@ -584,15 +626,18 @@ trip time. Give it a MAC address, and it will ping the resolved IP address.
 All the pings we've talked about so far test from a device that you control out
 to another device, but sometimes you need to test from the public Internet in to
 your network. Looking glass servers let you remotely run `ping` or `traceroute`
-to another device. Significant connectivity providers run these servers, which
-lets you choose where you test from, geographically and network
-connectivity-wise. Check the server lists to find the right one to test with for
-your situation.
+to another device. Significant connectivity providers, like Hurricane Electric
+and Lumen, run these servers, which lets you choose where you test from,
+geographically and network connectivity-wise. Check the server lists to find the
+right one to test with for your situation.
 
 Want to do a quick, longer term (up to about a month) test from the outside?
 DSLReports still runs a SmokePing service, which does periodic packet loss and
-latency tests. Check the terms of service to make sure it works for your
-situation or consider setting up `vaping` for a similar self-hosted test.
+latency tests. The higher on the graph, the higher the latency. The darker the
+"smoke", the more pings with a given latency. The smokier the graph, the more
+jitter there is. Before using the DSLReports service, check the terms of service
+to make sure it works for your situation or consider setting up `vaping` for a
+similar self-hosted test.
 
 :::
 
@@ -609,6 +654,11 @@ situation or consider setting up `vaping` for a similar self-hosted test.
 * Traceroute: `+trace`
 * Interactive: omit host
 
+#### GUI Alternative (Windows)
+
+* [DNSDataView](https://www.nirsoft.net/utils/dns_records_viewer.html)
+* Some automation for reverse lookups
+
 :::
 ::: {.column width="50%"}
 
@@ -621,11 +671,26 @@ situation or consider setting up `vaping` for a similar self-hosted test.
 
 You will still frequently work with IP addresses, but DNS is an important part
 of modern MoIP systems. You can perform basic DNS queries with `nslookup`. When
-you need to look up more specialized or complex records, like NMOS can use,
-you will need to `dig` for the information. With `dig` you can request all
-records for a name, clearly specify the DNS server to query, format the response
-for the situation, and even follow the resolution path from root server to
-authoritative server.
+you need to look up more specialized or complex records, like NMOS can use, you
+will need to `dig` for the information. With `dig` you can request a specific
+record type, like `PTR` or `TXT` (used by NMOS), or all records for a name by
+with the pseudotype of `ALL`.
+
+`nslookup` can be confusing when you need to query a specific DNS server. With
+`dig`, you identify the DNS server by prefacing it with an `@` symbol. `dig`
+defaults to printing a lot of information about your query, but sometimes that's
+TMI. Fortunately, you can format the response for the situation. `+short` gives
+you the answer to the query with nothing else, great for scripting. If you still
+want a longer view of the answer, but without the default query information,
+there are options for that, too. You can even follow the resolution path from
+root server to authoritative server, for a sort of DNS traceroute. If you have a
+lot of DNS queries to run, you can enter interactive mode by leaving off the
+target address.
+
+If you prefer a GUI, NirSoft offers DNSDataView for Windows. It will only query
+a limited set of record types. But it can create reports. Diagnosing DNS issues
+sometimes means following a trail of CNAMEs and reverse lookups, which
+DNSDataView will automate for you.
 
 :::
 
@@ -669,12 +734,17 @@ On Windows, the command line tool `netstat` ("network statistics") can show
 incoming and outgoing connections. It can be helpful to limit the protocol to
 TCP or UDP individually, since the lists get long. Printing all the listening
 ports with `-l` answers that first question about waiting for incoming
-connections.
+connections. Piping the output to find lets you filter out all the incoming and
+outgoing connections.
+
+If you want a GUI view of the same information, you have two choices. TCPView
+gives you more control over what you see, but Resource Monitor is available on
+nearly every Windows device that should still be in use.
 
 For Linux, you can still use `netstat`, though the syntax is a little different
 from the Windows command. The newer `ss` utility gives you more control over
-that long list of connections with filters. The command above will show all TCP
-connections by port number (not name) destined for the 192.0.2.0 subnet.
+that long list of connections with filters. The command you see here will show
+all TCP connections by port number (not name) destined for the 192.0.2.0 subnet.
 
 :::
 
@@ -685,6 +755,8 @@ connections by port number (not name) destined for the 192.0.2.0 subnet.
 #### Port scanning: [Nmap](https://nmap.org/)
 
 * Scan multiple ports & addresses: `nmap -p 80,25,443,110 198.51.100.20-100`
+* TCP Scan: `-sS` (SYN) or `-sT` (Connect)
+* UDP Scan: `-sU`
 * Service & version detection: `-sV`
 * OS detection: `-O`
 
@@ -700,15 +772,16 @@ network, proceed with caution. Make sure you have permission to use these tools.
 If your enterprise security team is doing their job, they will know what you are
 up to. Besides being concerned about policy violation risks, there is another,
 familiar risk to consider. Depending on how you use these tools, they carry the
-risk of causing outages. Consider running these tools during planned maintenance
-windows and on offline systems.
+danger of causing outages. Consider running these tools during planned
+maintenance windows and on offline systems.
 
 With that out of the way, let's talk about how to find out what is going on with
 another device, especially one you don't have the ability to work directly on.
 (But you have permission to muck around, right?) You can use Nmap to scan for
-open ports, those programs waiting for incoming connections. Nmap can also
-guess at the specific service and version running or detect the OS of the
-scanned device.
+open ports, those programs waiting for incoming connections. Specify the scan
+type, UDP or one of the TCP methods, depending on what service you want to ping.
+Nmap can also guess at the specific service and version running or detect the OS
+of the scanned device.
 
 Vulnerability scanning is an essential part of security preparedness. You want
 to know what your exposure is, so you can take the right mitigation steps.
@@ -742,12 +815,15 @@ fast and without unnecessary complexity.
 ::: notes
 
 We'll be covering packet capture and analysis in more depth later today, but I
-do want to share one Wireshark tip with you. Use *capture* filters as much as
-you can to keep your memory and file sizes manageable. Display filters are
-easier to work with and more expressive, but media systems are chatty,
+do want to share one Wireshark tip with you. Use *capture*, or pcap, filters as
+much as you can to keep your memory and file sizes manageable. Display filters
+are easier to work with and more expressive, but media systems are chatty,
 generating a lot of packets that take some sifting. I try to start with a short,
 unfiltered capture, figure out the packets I'm generally interested in, and then
 run a longer capture that filters out as much of the noise as possible.
+
+It can also be more convenient to run a packet capture on the command line with
+`tcpdump` and then analyze it later with Wireshark.
 
 :::
 
@@ -760,6 +836,7 @@ run a longer capture that filters out as much of the noise as possible.
 * [Keysight](https://www.keysight.com/us/en/products/network-test/protocol-load-test.html)
   (formerly Ixia): :moneybag::moneybag::moneybag:
 * [Ostinato](https://ostinato.org/): Build yourself or reasonably priced binaries
+* * Use [VLC to send RTP](https://support.adder.com/tiki/tiki-index.php?page=Network%3A%20Multicast%20test%20using%20VLC)
 
 :::
 ::: {.column width="50%"}
@@ -777,12 +854,18 @@ on [Unsplash](https://unsplash.com/photos/a-row-of-wind-turbines-in-front-of-a-m
 Working with "real" network traffic isn't always possible or ideal. Packet
 generators let you synthesize or replay network traffic. One common use case is
 for load testing. Some packet generators can pump out *a lot* of flows, more
-than you can get going from those "real" devices.
+than you can reasonably get going by hand with a few clients in a lab
+environment.
 
 But commercial packet generators can be well beyond our budgets, and we need
 some packets to learn or experiment with. [Ostinato](https://ostinato.org/) is
 open source, free as in beer if you build it yourself, or affordably available
 as pre-built binaries.
+
+Sometimes all you need a barebones RTP stream for a quick test. VLC can stream
+files over RTP. Choose your source file, enter your multicast address, set your
+media configuration, and your stream is going. Use VLC, or another program to
+receive the stream on another device.
 
 :::
 
@@ -801,6 +884,7 @@ as pre-built binaries.
 
 * [Iperf2](https://sourceforge.net/projects/iperf2/): Multicast & other media flows
 * [Iperf3](https://github.com/esnet/iperf): IT workloads or public Internet
+* Stress test multicast with [Multicast Hammer](https://support.pelco.com/s/article/Using-Multicast-Hammer-1538586730634?language=en_US)
 
 :::
 ::: {.column width="50%"}
@@ -815,14 +899,27 @@ as pre-built binaries.
 ::: notes
 
 "Is it fast enough?" The specs say that the disk, CPU, RAM... name your
-component should be, but we all know reality doesn't match spec sheets.
-Even though IOMeter hasn't been updated in a while, it remains the best disk
-performance benchmarking tool readily available. Spend a bit of time working
-out a realistic test plan for your benchmark.
+component should be, but we all know reality doesn't match spec sheets. Even
+though IOMeter hasn't been updated in a while, it remains the best disk
+performance benchmarking tool readily available. Spend a bit of time working out
+a realistic test plan for your benchmark. You can simulate different phases of
+disk use. Generally, you can have as many workers to create I/O load as you have
+cores or vCPUs available to your test machine. Be careful about selecting disks
+to test, you don't want to put a system disk or project files in danger.
 
 For network performance tests, Iperf2 and Iperf3 have overlapping feature sets.
 Iperf2 is better for multicast and other media flows. Use Iperf3 for more
-typical IT workload or public Internet tests.
+typical IT workload or public Internet tests. No matter which version you use,
+you need to install Iperf on two devices. One simulates a server and listens for
+incoming connections, while the other plays the client role and sends simulated
+data to the server.
+
+Multicast Hammer helps you stress test multicast networking. Like Iperf, it can
+operate in client or server mode. When acting as a client, you specify the
+number of multicast groups to subscribe, the address of the first group, and the
+port number to listen on. Multicast Hammer then subscribes to the sequential
+addresses starting at the one you specified. The server works similarly, with
+the addition of transmit speed, packet size, and burst options.
 
 :::
 
@@ -899,6 +996,13 @@ open source testers have recently made user un-friendly changes, so I can't
 strongly recommend one right now. There are plenty of choices depending on your
 needs and preferences.
 
+* Milkman is modular, offering a variety of transport and other useful plugins.
+* Bruno is an offline, file-based storage API tool. Note that the developers are
+  planning to release some transports that are of interest to professional media
+  networks in a freemium version
+* insomnium forked one of the popular API tools from before the problematic
+  changes, but hasn't had active development since then.
+
 The second tip for API troubleshooting is you should try to work from formal API
 specifications, often in the form of OpenAPI descriptions or smithy contracts
 for event-based APIs.
@@ -913,6 +1017,8 @@ for event-based APIs.
 * [sdpoker](https://github.com/AMWA-TV/sdpoker) for troubleshooting SDP files
 * AMWA NMOS [Testing Tool](https://specs.amwa.tv/nmos-testing/) for automated
 compliance testing
+* [Easy-NMOS](https://github.com/rhastie/easy-nmos): Docker compose for NMOS
+  registry, virtual node, & Testing Tool
 * Riedel [NMOS Explorer](https://www.riedel.net/en/downloads/firmware-software)
 for quick browsing devices
 * [EBU LIST](https://github.com/ebu/pi-list) for timing analysis, ANC decoding,
@@ -931,8 +1037,21 @@ for quick browsing devices
 There are some great open source and freely available tools for NMOS and SMPTE
 ST 2110 troubleshooting. Mentioned before, EBU LIST is great for analyzing your
 video and audio flows. Different vendors have different implementations and
-interpretations of SDP descriptions, which sdpoker can help you reconcile. AMWA,
-the organization behind NMOS has also released an automated testing tool.
+interpretations of SDP descriptions, which sdpoker can help you reconcile.
+
+AMWA, the organization behind NMOS has also released an automated testing tool.
+This is the same setup used during the JT-NM tested events that you can use for
+verifying compatibility for the devices and systems that you use in your
+facility.
+
+Whether you are trying to learn more, test new devices, or you are actively
+troubleshooting an issue, how many times have you wished you could set up your
+own router control system? In the MoIP world, we can actually do that, and there
+even is an "easy button" for it. Easy-NMOS is a docker compose-based recipe for
+spinning up an NMOS registry, a virtual node, and the testing tool.
+
+Also, Riedel has a freely available browser for quick peeks into an NMOS
+registry.
 
 :::
 
@@ -970,6 +1089,12 @@ docker network or even inside another container's namespace. You'll need to do
 that when you don't have those troubleshooting tools already built in to the
 problem container.
 
+If you still can't make sense of a Docker issue, it can help to go back to the
+basics. The `whoami` container, from the Traefik reverse proxy team, gives you
+all the building blocks of a real container --- latency, a JSON api, health
+checks --- stripped down to lightweight essentials. Get your network problem
+sorted out with `whoami` and then go back to your real container.
+
 :::
 
 ### Keep Searching
@@ -977,12 +1102,13 @@ problem container.
 :::::::::::::: {.columns}
 ::: {.column width="50%"}
 
-* Stress test multicast with [Multicast Hammer](https://support.pelco.com/s/article/Using-Multicast-Hammer-1538586730634?language=en_US)
-* Use [VLC to send RTP](https://support.adder.com/tiki/tiki-index.php?page=Network%3A%20Multicast%20test%20using%20VLC)
 * Check [Awesome Real Time Communications](https://github.com/rtckit/awesome-rtc#readme)
   for SIP tools
 * Find lots of [Awesome Broadcasting](https://github.com/ebu/awesome-broadcasting#readme)
   tools
+* [Awesome Networking](https://github.com/nyquist/awesome-networking)
+* [Awesome](https://github.com/sindresorhus/awesome#readme)
+* [Awesome Awesomness](https://github.com/bayandin/awesome-awesomeness#readme)
 
 :::
 ::: {.column width="50%"}
@@ -998,9 +1124,8 @@ problem container.
 
 The last tip I'll leave you with is to keep your eyes open. You never know when
 you'll find the next tool or technique that will help you solve problems faster
-or deal with more complex or just plain weird issues. Stress test mutlicast?
-Get a hammer. Need a down and dirty RTP stream? Fire up VLC. There's lots more
-Awesome out there.
+or deal with more complex or just plain weird issues. There's lots more Awesome
+out there.
 
 :::
 
