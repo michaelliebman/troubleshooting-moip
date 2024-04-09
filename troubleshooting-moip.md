@@ -640,6 +640,11 @@ similar self-hosted test.
 * Traceroute: `+trace`
 * Interactive: omit host
 
+#### GUI Alternative (Windows)
+
+* [DNSDataView](https://www.nirsoft.net/utils/dns_records_viewer.html)
+* Some automation for reverse lookups
+
 :::
 ::: {.column width="50%"}
 
@@ -667,6 +672,11 @@ there are options for that, too. You can even follow the resolution path from
 root server to authoritative server, for a sort of DNS traceroute. If you have a
 lot of DNS queries to run, you can enter interactive mode by leaving off the
 target address.
+
+If you prefer a GUI, NirSoft offers DNSDataView for Windows. It will only query
+a limited set of record types. But it can create reports. Diagnosing DNS issues
+sometimes means following a trail of CNAMEs and reverse lookups, which
+DNSDataView will automate for you.
 
 :::
 
