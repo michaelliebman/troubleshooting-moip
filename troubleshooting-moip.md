@@ -1006,6 +1006,7 @@ on the tin.
 [smithy](https://smithy.io/) contracts
   * Example: [NMOS IS-05](https://specs.amwa.tv/is-05/releases/v1.1.2/APIs/ConnectionAPI.html)
   ([source](https://github.com/AMWA-TV/is-05/blob/v1.1.x/APIs/ConnectionAPI.raml))
+* Don't know anything about the API? [Ncat](https://nmap.org/ncat/)
 
 :::
 ::: {.column width="50%"}
@@ -1034,6 +1035,12 @@ needs and preferences.
 The second tip for API troubleshooting is you should try to work from formal API
 specifications, often in the form of OpenAPI descriptions or smithy contracts
 for event-based APIs.
+
+If you know little about an API, a full test tool might not be a good place to
+start. Ncat, from the Nmap team, is a modern update to netcat. Ncat can be a
+sender, a receiver, or a proxy. If you want to figure out something like a
+quirky tally protocol, start Ncat, type commands, and view responses. It can
+even use TLS encryption.
 
 :::
 
