@@ -683,9 +683,14 @@ similar self-hosted test.
 You will still frequently work with IP addresses, but DNS is an important part
 of modern MoIP systems. You can perform basic DNS queries with `nslookup`. When
 you need to look up more specialized or complex records, like NMOS can use, you
-will need to `dig` for the information. With `dig` you can request a specific
-record type, like `PTR` or `TXT` (used by NMOS), or all records for a name by
-with the pseudotype of `ALL`.
+will need to `dig` for the information. While part of the default packages of
+most Linux distributions, you will need to install `dig` from the ISC BIND DNS
+tools. Download the installer, which also includes the BIND DNS server, and
+start the installation wizard. Be sure to select Tools Only, unless you really
+want that DNS server.
+
+With `dig` you can request a specific record type, like `PTR` or `TXT` (used by
+NMOS), or all records for a name with the pseudotype of `ALL`.
 
 `nslookup` can be confusing when you need to query a specific DNS server. With
 `dig`, you identify the DNS server by prefacing it with an `@` symbol. `dig`
