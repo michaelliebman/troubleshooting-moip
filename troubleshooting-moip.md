@@ -432,6 +432,20 @@ OTDR.
 Most of the other tools you need for working on professional media networks are
 probably already in your toolkit.
 
+* We all have a preferred style of wire stripper.
+* RJ45 crimp tools come in a variety of styles. I'm sure people get religious
+  about their preferences, so find one that is right for you.
+* 110 punch down tools are important for patch bays and keystone jacks. Make
+  sure you understand which way the cut side should face.
+* An optical power meter or a visual fault locator is the optical equivalent of
+  a continuity tester.
+* I haven't used a loopback adapter often, but I am glad that I always put it
+  back in the same pocket in my tool bag.
+* Tone generators get a workout when the electricians labelled all the cables
+  "1".
+
+And I hope we've all learned how to build better racks than these.
+
 :::
 
 ## Software Techniques
