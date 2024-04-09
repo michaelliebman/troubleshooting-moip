@@ -943,8 +943,8 @@ you have access to Net-SNMP, `snmpwalk` prints out a whole tree's worth of
 information.
 
 The simple part of SNMP refers to the protocol design, not about its
-user-friendliness. A graphical MIB browser usually helps explore a new device's
-metrics. iReasoning and FrameFlow each offer popular GUI clients.
+user-friendliness. A graphical MIB browser helps explore a new device's metrics.
+iReasoning and FrameFlow each offer popular GUI clients.
 
 :::
 
