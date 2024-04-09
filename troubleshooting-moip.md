@@ -539,7 +539,7 @@ finishing. Use `-h` on Windows and `-m` on Linux to set the hop limit.
 :::::::::::::: {.columns}
 ::: {.column width="50%"}
 
-#### `pathping` (Windows)
+#### `pathping` (Windows) / `mtr` (Linux)
 
 * `ping` and `tracert` mashed together
 * hop behavior over time
@@ -563,9 +563,11 @@ Sometimes `ping` and `traceroute` don't give you the clues you are looking for.
 ICMP pings aren't the same as TCP or UDP. You can get `ping`-like tests with
 Nmap, which we'll cover later.
 
-On Windows, `ping` and `tracert` will give you slightly different views of the
-network, so why not get the best of both worlds? PathPing gives you individual
-hop statistics over a longer period of time.
+`ping` and `tracert` will give you slightly different views of the network, so
+why not get the best of both worlds? On Windows, PathPing gives you individual
+hop statistics over a longer period of time. My Trace Route (`mtr`) will give
+you similar measurements on Linux. Note that you will need to install it as it
+isn't a standard utility.
 
 Linux lets you test layer 2 connectivity with `arping`. Address Resolution
 Protocol maps MAC addresses to IP addresses. Give `arping` an IP address, it
