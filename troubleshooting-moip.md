@@ -1073,6 +1073,9 @@ sorted out with `whoami` and then go back to your real container.
   for SIP tools
 * Find lots of [Awesome Broadcasting](https://github.com/ebu/awesome-broadcasting#readme)
   tools
+* [Awesome Networking](https://github.com/nyquist/awesome-networking)
+* [Awesome](https://github.com/sindresorhus/awesome#readme)
+* [Awesome Awesomness](https://github.com/bayandin/awesome-awesomeness#readme)
 
 :::
 ::: {.column width="50%"}
