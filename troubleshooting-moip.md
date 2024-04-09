@@ -909,6 +909,40 @@ data to the server.
 
 :::
 
+### SNMP
+
+:::::::::::::: {.columns}
+::: {.column width="50%"}
+
+* Net-SNMP [Windows Binaries](https://sourceforge.net/projects/net-snmp/files/net-snmp%20binaries/5.7-binaries/net-snmp-5.7.0-1.x86.exe/download)
+* Query a tree: `snmpwalk -Os -c <community> -v 1 <host> <mib>`
+* MIB Browsers (Windows):
+  * [iReasoning](https://ireasoning.com/mibbrowser.shtml)
+  * [FrameFlow](https://kb.frameflow.com/free-snmp-browser/)
+
+:::
+::: {.column width="50%"}
+
+:::
+::::::::::::::
+
+::: notes
+
+SNMP is still widely deployed for device monitoring even with advances in
+observability tools. The built-in Windows utilities limit the troubleshooting
+you can do. The Net-SNMP project gives you a rich set of command line tools. The
+project team is not producing Windows binaries with recent releases, so you
+either need to use them on a Linux machine, install the package in Windows
+Subsystem for Linux, build binaries yourself, or install older versions. Once
+you have access to Net-SNMP, `snmpwalk` prints out a whole tree's worth of
+information.
+
+The simple part of SNMP refers to the protocol design, not about its
+user-friendliness. A graphical MIB browser usually helps explore a new device's
+metrics. iReasoning and FrameFlow each offer popular GUI clients.
+
+:::
+
 ### Time
 
 :::::::::::::: {.columns}
