@@ -470,11 +470,18 @@ techniques.
 
 ### Check the deets (Windows)
 
-#### `ipconfig` & `netsh`
+#### `ipconfig`
 
 * `/all`: Prints everything
 * `/release` & `/renew`: use wildcards for interface
 * `/flushdns`: Force clearing DNS cache
+
+#### `netsh`
+
+* Print all IPv4 network info: `netsh interface ipv4 show config`
+* Save config: `netsh int dump > mycfg.dat`
+* Restore config: `netsh exec mycfg.dat`
+* Work with a remote machine: `netsh set machine <remotecomputer>`
 
 ::: notes
 
@@ -487,8 +494,17 @@ more for every network interface. You can also `/release` or `/renew`
 DHCP-assigned addresses, which you can limit to specific interfaces. Windows
 interface names are long, so wildcards save some typing. Sometimes you need to
 clear the DNS cache with `/flushdns` to get a new record that has an unexpired
-TTL. If you need to script setting or getting the configuration, you can use
-`netsh`.
+TTL.
+
+If you need to script setting or getting the configuration, you can use `netsh`.
+Like with most switch or router command line interfaces, you can shorten
+subcommands for `netsh`. If you want to list all the network information, like
+you can do with `ipconfig`, you can shorten the command to `netsh int ip sho
+conf`. `netsh` has an interactive mode and allows you to set, as well as get,
+the configuration. Even more useful, you can `dump` the configuration, make
+changes and restore the saved configuration. You can even make changes to
+another computer. Be careful that you don't make that remote computer
+unreachable.
 
 :::
 
