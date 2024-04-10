@@ -593,8 +593,8 @@ uses interface numbers that aren't used in any of the other commands we've
 looked out. Printing the route table also includes the interface number mapping.
 
 On Linux, the command is more straightforward. You enter the destination in CIDR
-notation, include the world `via` to identify the gateway, and enter the
-standard interface name.
+notation, include the word `via` to identify the gateway, and enter the standard
+interface name.
 
 :::
 
