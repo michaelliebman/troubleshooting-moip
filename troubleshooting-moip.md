@@ -804,6 +804,7 @@ DNSDataView will automate for you.
 
 * Choose protocol: `-p (tcp|udp)`
 * Only listening ports: `netstat -a | find /i "listening"`
+* Executable & process ID: `netstat -abo`
 * GUI: [TCPView](https://learn.microsoft.com/en-us/sysinternals/downloads/tcpview)
   or [Resource Monitor](https://stackoverflow.com/a/23718720/6283412)
 
@@ -843,9 +844,15 @@ listening. It isn't surprising that your computer might sit for a while, seeming
 to do nothing. Remember find is going through that long list of incoming,
 outgoing, and listening ports to sift out the listening ports.
 
-If you want a GUI view of the same information, you have two choices. TCPView
-gives you more control over what you see, but Resource Monitor is available on
-nearly every Windows device that should still be in use.
+Now you know that some program is listening, but *which* program is it? Add the
+`b` and `o` switches, and you get the executable path and process ID of the
+listening application. I recommend against piping to find this time, because
+netstat uses a multi-line output format with `b` option.
+
+If you need that kind of detailed information, you should consider switching to
+a GUI program for viewing the connection status, and you have two choices.
+TCPView gives you more control over what you see, but Resource Monitor is
+available on nearly every Windows device that should still be in use.
 
 For Linux, you can still use `netstat`, though the syntax is a little different
 from the Windows command. The newer `ss` utility gives you more control over
