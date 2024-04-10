@@ -812,8 +812,9 @@ DNSDataView will automate for you.
 
 * Choose protocol: `--tcp` or `--udp`
 * Only listening ports: `-l`
-* [Filters](https://manpages.debian.org/bookworm/iproute2/ss.8.en.html):
-  `ss -nt dst 192.0.2.0/24`
+* [Filters](https://manpages.debian.org/bookworm/iproute2/ss.8.en.html)
+  * Source address: `ss -nt src 192.0.2.0/24`
+  * Destination port: `ss -ant dst :8080`
 
 :::
 ::: {.column width="50%"}
@@ -856,8 +857,10 @@ available on nearly every Windows device that should still be in use.
 
 For Linux, you can still use `netstat`, though the syntax is a little different
 from the Windows command. The newer `ss` utility gives you more control over
-that long list of connections with filters. The command you see here will show
-all TCP connections by port number (not name) destined for the 192.0.2.0 subnet.
+that long list of connections with filters. Working on a server and want to see
+if a particular device connected? Filter on the source address or even a whole
+subnet, like shown here in CIDR notation. You can check which servers a device
+connected to on a specific port by using a colon prefixed port number.
 
 :::
 
