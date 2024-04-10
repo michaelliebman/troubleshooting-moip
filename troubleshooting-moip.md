@@ -804,6 +804,7 @@ DNSDataView will automate for you.
 
 * Choose protocol: `-p (tcp|udp)`
 * Only listening ports: `netstat -a | find /i "listening"`
+* Executable & process ID: `netstat -abo`
 * GUI: [TCPView](https://learn.microsoft.com/en-us/sysinternals/downloads/tcpview)
   or [Resource Monitor](https://stackoverflow.com/a/23718720/6283412)
 
@@ -811,8 +812,9 @@ DNSDataView will automate for you.
 
 * Choose protocol: `--tcp` or `--udp`
 * Only listening ports: `-l`
-* [Filters](https://manpages.debian.org/bookworm/iproute2/ss.8.en.html):
-  `ss -nt dst 192.0.2.0/24`
+* [Filters](https://manpages.debian.org/bookworm/iproute2/ss.8.en.html)
+  * Source address: `ss -nt src 192.0.2.0/24`
+  * Destination port: `ss -ant dst :8080`
 
 :::
 ::: {.column width="50%"}
@@ -835,17 +837,30 @@ On Windows, the command line tool `netstat` ("network statistics") can show
 incoming and outgoing connections. It can be helpful to limit the protocol to
 TCP or UDP individually, since the lists get long. Printing all the listening
 ports with `-l` answers that first question about waiting for incoming
-connections. Piping the output to find lets you filter out all the incoming and
-outgoing connections.
+connections.
 
-If you want a GUI view of the same information, you have two choices. TCPView
-gives you more control over what you see, but Resource Monitor is available on
-nearly every Windows device that should still be in use.
+Piping the output to find lets you filter out all the incoming and outgoing
+connections. If you are using Powershell, you will need triple quotes around
+listening. It isn't surprising that your computer might sit for a while, seeming
+to do nothing. Remember find is going through that long list of incoming,
+outgoing, and listening ports to sift out the listening ports.
+
+Now you know that some program is listening, but *which* program is it? Add the
+`b` and `o` switches, and you get the executable path and process ID of the
+listening application. I recommend against piping to find this time, because
+netstat uses a multi-line output format with `b` option.
+
+If you need that kind of detailed information, you should consider switching to
+a GUI program for viewing the connection status, and you have two choices.
+TCPView gives you more control over what you see, but Resource Monitor is
+available on nearly every Windows device that should still be in use.
 
 For Linux, you can still use `netstat`, though the syntax is a little different
 from the Windows command. The newer `ss` utility gives you more control over
-that long list of connections with filters. The command you see here will show
-all TCP connections by port number (not name) destined for the 192.0.2.0 subnet.
+that long list of connections with filters. Working on a server and want to see
+if a particular device connected? Filter on the source address or even a whole
+subnet, like shown here in CIDR notation. You can check which servers a device
+connected to on a specific port by using a colon prefixed port number.
 
 :::
 
