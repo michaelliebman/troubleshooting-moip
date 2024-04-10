@@ -518,6 +518,15 @@ unreachable.
 * `ip a show up`: list addresses on active interfaces
 * `ip -ts mon`: monitor network changes
 
+#### DHCP release/renew
+
+:warning: Releasing/renewing an IP address always brings down the interface.
+
+* `sudo dhclient -r && sudo dhclient`
+* `sudo dhcpcd -k && sudo dhcpcd`
+* `sudo networkctl renew wlo1`
+* `sudo pump -r && sudo pump -R`
+
 ::: notes
 
 On Linux, older documentation talks about `ifconfig` (interface config) for
@@ -532,6 +541,10 @@ addresses is as quick as `ip a`. If you want to filter the address list, say to
 print active interfaces, add `show` plus the query, in this case `up`. Keep
 track of changes to the network connections with `ip mon`. Adding `-ts` gives
 you a scroll-friendly timestamp.
+
+The exact procedure for releasing and renewing DHCP leases on Linux depends on
+the distribution. One of these commands should do the trick. Make sure you have
+a backup plan for accessing the device if you are working on it remotely.
 
 :::
 
