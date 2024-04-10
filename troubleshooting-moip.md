@@ -219,8 +219,9 @@ used, and I've learned something from every edition I've looked at.
 Let's look at the steps we'll follow for troubleshooting networked systems. Note
 that the network-specific CompTIA method is nearly identical to the generic
 DECSAR method. We'll identify the problem, work up a theory about the cause,
-test that theory, create a plan for correcting the issue, and close out the
-documentation we've been keeping throughout the process.
+test that theory, create a plan for correcting the issue, put that plan in
+motion, and close out the documentation we've been keeping throughout the
+process.
 
 :::
 
