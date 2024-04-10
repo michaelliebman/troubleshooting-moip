@@ -535,6 +535,56 @@ you a scroll-friendly timestamp.
 
 :::
 
+### Finding your way
+
+#### Address Resolution Protocol
+
+* Print table
+  * Windows: `arp -a`
+  * Linux: `ip n`
+* Add an entry
+  * Windows: `arp -s 192.0.2.5 00-a0-b0-c0-d0-e0`
+  * Linux: `sudo ip n a 192.0.2.5 ll 00:a0:b0:c0:d0:e0 dev eth0`
+
+#### Static routes
+
+* Print table
+  * Windows: `route print`
+  * Linux: `ip r`
+* Add a route
+  * Windows: `route add 198.51.100.0 mask 255.255.255.0 192.0.2.1 METRIC 3 IF 1`
+  * Linux: `sudo ip r a 198.51.100.0/24 via 192.0.2.1 dev eth0`
+
+::: notes
+
+When everything is working right, layer 2 to layer 3 handoffs happen without
+needing a second thought. But every once in a while, we need to take a look at
+the Address Resolution Protocol table. You can do that with `arp -a` on Windows
+or `ip n` on Linux.
+
+Even less often, you need to add a table entry, when you, for example change the
+IP address of a remote computer to something inaccessible, and you are desperate
+to not have to go into the office at 2am. That's something that I've definitely
+never ever done. On Windows, add an ARP entry by entering the target IP address
+and the matching MAC address separating the octets with hyphens. On Linux, make
+sure you put `lladdr`, or `ll` for short, between the IP and MAC addresses and
+specify the interface.
+
+In professional media systems, you may need to work with static routes on
+endpoint devices if you separate multicast and unicast on separate virtual
+networks or if you have red & blue networks. Print the route table on Windows
+with `route print` and on Linux with `ip r`. Setting temporary static routes on
+Windows means entering the destination network with its network mask in dotted
+decimal form, the gateway, the cost metric, and the interface. Note that `route`
+uses interface numbers that aren't used in any of the other commands we've
+looked out. Printing the route table also includes the interface number mapping.
+
+On Linux, the command is more straightforward. You enter the destination in CIDR
+notation, include the world `via` to identify the gateway, and enter the
+standard interface name.
+
+:::
+
 ### Give it your best Sean Connery
 
 :::::::::::::: {.columns}
