@@ -835,8 +835,13 @@ On Windows, the command line tool `netstat` ("network statistics") can show
 incoming and outgoing connections. It can be helpful to limit the protocol to
 TCP or UDP individually, since the lists get long. Printing all the listening
 ports with `-l` answers that first question about waiting for incoming
-connections. Piping the output to find lets you filter out all the incoming and
-outgoing connections.
+connections.
+
+Piping the output to find lets you filter out all the incoming and outgoing
+connections. If you are using Powershell, you will need triple quotes around
+listening. It isn't surprising that your computer might sit for a while, seeming
+to do nothing. Remember find is going through that long list of incoming,
+outgoing, and listening ports to sift out the listening ports.
 
 If you want a GUI view of the same information, you have two choices. TCPView
 gives you more control over what you see, but Resource Monitor is available on
