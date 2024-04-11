@@ -776,7 +776,7 @@ start the installation wizard. Be sure to select Tools Only, unless you really
 want that DNS server.
 
 With `dig` you can request a specific record type, like `PTR` or `TXT` (used by
-NMOS), or all records for a name with the pseudotype of `ALL`.
+NMOS), or all records for a name with the pseudotype of `ANY`.
 
 `nslookup` can be confusing when you need to query a specific DNS server. With
 `dig`, you identify the DNS server by prefacing it with an `@` symbol. `dig`
