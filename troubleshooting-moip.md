@@ -585,7 +585,7 @@ sure you put `lladdr`, or `ll` for short, between the IP and MAC addresses and
 specify the interface.
 
 In professional media systems, you may need to work with static routes on
-endpoint devices if you separate multicast and unicast on separate virtual
+endpoint devices if you separate multicast and unicast on different virtual
 networks or if you have red & blue networks. Print the route table on Windows
 with `route print` and on Linux with `ip r`. Setting temporary static routes on
 Windows means entering the destination network with its network mask in dotted
@@ -680,10 +680,10 @@ hop statistics over a longer period of time. My Trace Route (`mtr`) will give
 you similar measurements on Linux. Note that you will need to install it as it
 isn't a standard utility.
 
-Linux lets you test layer 2 connectivity with `arping`. Address Resolution
-Protocol maps MAC addresses to IP addresses. Give `arping` an IP address, it
-will send link layer frames to the associated MAC address and report the round
-trip time. Give it a MAC address, and it will ping the resolved IP address.
+Linux lets you test layer 2 connectivity with `arping`. Give `arping` an IP
+address, it will send link layer frames to the associated MAC address and report
+the round trip time. Give it a MAC address, and it will ping the resolved IP
+address.
 
 :::
 
@@ -776,7 +776,7 @@ start the installation wizard. Be sure to select Tools Only, unless you really
 want that DNS server.
 
 With `dig` you can request a specific record type, like `PTR` or `TXT` (used by
-NMOS), or all records for a name with the pseudotype of `ALL`.
+NMOS), or all records for a name with the pseudotype of `ANY`.
 
 `nslookup` can be confusing when you need to query a specific DNS server. With
 `dig`, you identify the DNS server by prefacing it with an `@` symbol. `dig`
