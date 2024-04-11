@@ -585,7 +585,7 @@ sure you put `lladdr`, or `ll` for short, between the IP and MAC addresses and
 specify the interface.
 
 In professional media systems, you may need to work with static routes on
-endpoint devices if you separate multicast and unicast on separate virtual
+endpoint devices if you separate multicast and unicast on different virtual
 networks or if you have red & blue networks. Print the route table on Windows
 with `route print` and on Linux with `ip r`. Setting temporary static routes on
 Windows means entering the destination network with its network mask in dotted
