@@ -680,10 +680,10 @@ hop statistics over a longer period of time. My Trace Route (`mtr`) will give
 you similar measurements on Linux. Note that you will need to install it as it
 isn't a standard utility.
 
-Linux lets you test layer 2 connectivity with `arping`. Address Resolution
-Protocol maps MAC addresses to IP addresses. Give `arping` an IP address, it
-will send link layer frames to the associated MAC address and report the round
-trip time. Give it a MAC address, and it will ping the resolved IP address.
+Linux lets you test layer 2 connectivity with `arping`. Give `arping` an IP
+address, it will send link layer frames to the associated MAC address and report
+the round trip time. Give it a MAC address, and it will ping the resolved IP
+address.
 
 :::
 
