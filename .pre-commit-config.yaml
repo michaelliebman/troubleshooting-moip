@@ -27,3 +27,9 @@
     rev: v0.40.0
     hooks:
       - id: markdownlint
+  - repo: https://github.com/sirosen/texthooks
+    rev: 0.6.6
+    hooks:
+      - id: fix-smartquotes
+      - id: fix-ligatures
+      - id: fix-spaces
