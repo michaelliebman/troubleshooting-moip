@@ -34,7 +34,7 @@ video content on all the SirusXM and Pandora distribution platforms.
 ![[^credit-fast]](https://source.unsplash.com/xzLKOczi4As "Title: Time laps of cars on a road in Thailand at night")
 
 [^credit-fast]: Photo by [jet dela cruz](https://unsplash.com/@jetjetdelacruz)
-on [Unsplash](hhttps://unsplash.com/photos/time-lapse-photography-of-cars-on-road-during-night-time-xzLKOczi4As)
+on [Unsplash](https://unsplash.com/photos/time-lapse-photography-of-cars-on-road-during-night-time-xzLKOczi4As)
 
 :::
 ::::::::::::::
