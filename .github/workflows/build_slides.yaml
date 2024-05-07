@@ -2,7 +2,7 @@ name: Build Slides
 
 on:
   pull_request:
-    types: [submitted, edited]
+    types: [opened, edited, reopened, synchronize]
 
 jobs:
   pre-commit:
