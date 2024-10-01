@@ -1,5 +1,6 @@
 version: "0.2"
-ignorePaths: ["package-lock.json", ".pre-commit-config.yaml"]
+ignorePaths: []
+files: ["*.md"]
 dictionaryDefinitions: []
 dictionaries: []
 words: []
